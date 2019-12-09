@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +6,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>AboveClouds - Kontakt</title>
+    <title>&#9729;AboveClouds - Startseite</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +48,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home
                             <span class="sr-only">(current)</span>
                         </a>
@@ -60,16 +57,16 @@
                         <a class="nav-link" href="about.html">Über uns</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Unsere Dienste</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="contact.html">Kontakt</a>
                     </li>
                 </ul>
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a href="#">Anmelden</a></li>
+                    <li><a href="main.html">Anmelden</a></li>
                     <li><a href="#">Registrieren</a></li>
                 </ul>
             </div>
@@ -78,86 +75,95 @@
 </header>
 
 <!-- Page Content -->
-<!-- Heading Starts Here -->
-<div class="page-heading header-text">
+<!-- Banner Starts Here -->
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="header-text caption">
+                    <h2>Überprüfen Sie Ihre Emailadresse</h2>
+                    <div id="search-section">
+                        <form id="suggestion_form" name="gs" method="get" action="#">
+                            <div class="searchText">
+
+                                <input type="text" name="q" class="searchText"
+                                       placeholder="Gebe Sie Ihre Emailadresse hier ein..." autocomplete="on">
+
+                            </div>
+                            <input type="submit" name="results" class="main-button" value="Überprüfen">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Ends Here -->
+
+<!-- Trusted Starts Here -->
+<div class="trusted-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Us</h1>
-                <p><a href="index.html">Home</a> / <span>Contact Us</span></p>
+                <div class="trusted-section-heading">
+                    <h4>TRUSTED BY 1,250+ HAPPY CUSTOMERS WORLDWIDE</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="owl-trusted owl-carousel">
+                    <div class="trusted-item">
+                        <img src="assets/images/itc-logo-small.png" alt="trusted 1">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Heading Ends Here -->
+<!-- Trusted Ends Here -->
 
-
-<!-- Contact Us Starts Here -->
-<div class="contact-us">
+<!-- Testimonials Starts Here -->
+<div class="testimonials-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="contact-form">
-                    <form id="contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Your name" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="email" type="text" id="email" placeholder="Your email" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="subject" type="text" id="subject" placeholder="Subject">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" id="message" placeholder="Your message"
-                                              required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <span>Testimonials</span>
+                    <h2>Was man so munkelt</h2>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="right-content">
-                    <div class="section-heading">
-                        <span>Contact Us</span>
-                        <h2>Let's keep in touch</h2>
-                        <p>Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at
-                            feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.</p>
+            <div class="col-md-10 offset-md-1">
+                <div class="owl-testimonials owl-carousel">
+                    <div class="testimonial-item">
+                        <div class="icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <p>"AboveClouds ist definitiv unsere größte Konkurenz auf dem Markt."</p>
+                        <h4>Gobias Terlinger</h4>
+                        <span>CEO von ownCloud</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <ul>
-                                <li><i class="fa fa-phone"></i> 010-020-0560</li>
-                                <li><i class="fa fa-support"></i> support@company.com</li>
-                            </ul>
+                    <div class="testimonial-item">
+                        <div class="icon">
+                            <i class="fa fa-quote-right"></i>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> contact@company.com</li>
-                                <li><i class="fa fa-globe"></i> www.company.com</li>
-                            </ul>
+                        <p>"AboveClouds ist meineserachtens nach die bessere Lösung im Vergleich zu unserer."</p>
+                        <h4>Hew Drouston</h4>
+                        <span>CEO von Dropbox</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="icon">
+                            <i class="fa fa-quote-right"></i>
                         </div>
+                        <p>"AboveClouds wird das nächste große Investment von uns."</p>
+                        <h4>Natya Sadella</h4>
+                        <span>CEO von Microsoft</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Contact Us Ends Here -->
+<!-- Testimonials Ends Here -->
+
 
 <!-- Footer Starts Here -->
 <footer>
@@ -248,4 +254,3 @@
 </script>
 
 </body>
-</html>
