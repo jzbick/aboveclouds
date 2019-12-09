@@ -1,3 +1,4 @@
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -308,4 +309,5 @@ https://templatemo.com/tm-541-host-cloud
       }
     </script>
 
-  </body>
+    </body>
+  </html>
