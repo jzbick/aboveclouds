@@ -42,7 +42,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="cloud">&#9729;</span>
+            <a class="navbar-brand" href="index.php"><span class="cloud">&#9729;</span>
                 <h2><em>AboveClouds</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,18 +51,18 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home
+                        <a class="nav-link" href="index.php">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Über uns</a>
+                        <a class="nav-link" href="about.php">Über uns</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Unsere Dienste</a>
+                        <a class="nav-link" href="services.php">Unsere Dienste</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Kontakt</a>
+                        <a class="nav-link" href="contact.php">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Contact Us</h1>
-                <p><a href="index.html">Home</a> / <span>Contact Us</span></p>
+                <p><a href="index.php">Home</a> / <span>Contact Us</span></p>
             </div>
         </div>
     </div>
