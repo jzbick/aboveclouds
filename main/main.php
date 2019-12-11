@@ -35,7 +35,6 @@
 
     -->
 </head>
-
 <body>
 
 <!-- ***** Preloader Start ***** -->
@@ -62,7 +61,6 @@
 
         </div>
     </div>
-
 
     <div class="filetable">
         <form enctype="multipart/form-data" method="post" action="../files/upload.php">
@@ -100,44 +98,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Banner Starts Here -->
-    <div class="main">
-        <div class="banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <form enctype="multipart/form-data" method="post" action="../files/upload.php">
-                            <input type="file" name="userfile">
-                            <button type="submit">Hochladen</button>
-                        </form>
-                        <div class="filetable">
-                            <table id="filetable">
-                                <thead>
-                                    <tr>
-                                        <th class="icon">Icon</th>
-                                        <th class="name">Name</th>
-                                        <th class="datum">Bearbeitet</th>
-                                        <th class="button">Buttons</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($res as $file) { ?>
-                                    <tr>
-                                        <td class="icon">Icon</td>
-                                        <td class="name"><?=$file['Name'] ?></td>
-                                        <td class="datum"><?=($file['BDatum'] != NULL ? $file['BDatum']: $file['ADatum'])?></td>
-                                        <td class="button">...</td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- Banner Ends Here -->
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
