@@ -1,6 +1,6 @@
 <?php
     include './config/datenbankzugriff.php';
-    $sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid';
+    $sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 5';
     $nid = $_COOKIE['N_ID'];
     $get_files = $dbc -> prepare($sql_files);
     $get_files-> bindParam(':nid', $nid);
