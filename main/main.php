@@ -38,71 +38,51 @@
 </div>
 <!-- ***** Preloader End ***** -->
 
-<!-- Header -->
-<header class="main-header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <h2><span class="cloud">&#9729;</span></h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive"></div>
-        </div>
-    </nav>
-</header>
+<!-- Grid -->
+<div class="main-container">
+    <!-- Header -->
+    <header class="main-header">
+        <h2><span class="cloud">&#9729;</span></h2>
+    </header>
 
-<!-- Side Bars -->
-<div class="left">
-    <div class="sidebar">
+    <!-- Side Bars -->
+    <div class="left">
+        <div class="sidebar">
 
 
-    </div>
-</div>
-
-<div class="right">
-    <div class="sidebar">
-
-    </div>
-</div>
-
-<!-- Banner Starts Here -->
-<div class="main">
-    <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="filetable">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th class="icon">Icon</th>
-                                <th class="name">Name</th>
-                                <th class="datum">Bearbeitet</th>
-                                <th class="button">Buttons</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="icon">Icon</td>
-                                <td class="name">Test.txt</td>
-                                <td class="datum">2019-12-08</td>
-                                <td class="button">
-                                    <img style="cursor: pointer;" onclick="Download"
-                                         src="https://img.icons8.com/material/24/000000/downloads.png">
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-</div><!-- Banner Ends Here -->
 
+    <div class="filetable">
+        <table>
+            <thead>
+            <tr>
+                <th class="icon">Icon</th>
+                <th class="name">Name</th>
+                <th class="datum">Bearbeitet</th>
+                <th class="button">Buttons</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="icon">Icon</td>
+                <td class="name">Test.txt</td>
+                <td class="datum">2019-12-08</td>
+                <td class="button">
+                    <img style="cursor: pointer;" onclick="Download"
+                         src="https://img.icons8.com/material/24/000000/downloads.png">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="right">
+        <div class="sidebar">
+
+        </div>
+    </div>
+</div>
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
