@@ -9,14 +9,16 @@
         if (!file_exists($uploaddir)) {
             mkdir($uploaddir, 0777, true);
         }
-        move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
-        include_once './newFile.php';
-        $new_file->execute();
+        if(!file_exists($uploadfile)){
+            move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
+            include_once './newFile.php';
+            $new_file->execute();
+        }
     }else {
         header('Location: http://aboveclouds.online/');
     }
 ?>
 
 <script> 
-    window.history.back();
+    window.location.pathname= '/aboveclouds/main/main.php';
 </script>
