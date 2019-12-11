@@ -326,8 +326,11 @@ header {
     outline: none;
 }
 
-.main-header .navbar .navbar-brand h2{
+.main-header .navbar .navbar-brand h2 {
     font-size: 125px;
+    margin-top: -45px;
+    margin-left: -175px;
+    position: relative;
 }
 
 .navbar .navbar-brand h2 {
@@ -342,8 +345,27 @@ header {
 }
 
 .cloud {
-    color: white;
+    color: darkblue;
     float: left;
+}
+
+.sidebar {
+    display: flex;
+    box-sizing: border-box;
+    width: 240px;
+    min-width: 240px;
+    height: 100%;
+    background: #F7F9FA;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+.left .sidebar{
+    margin-left:0px;
+}
+
+.right .sidebar{
+   margin-left:84.25%;
 }
 
 .background-header .cloud {
@@ -483,7 +505,7 @@ header {
 }
 
 .main .banner {
-    padding-bottom: 375px;
+    padding-bottom: 350px;
 }
 
 .banner .caption {
