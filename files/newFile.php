@@ -6,5 +6,5 @@
     $new_file->bindParam(':name', $file_name);
     $new_file->bindParam(':pfad', $file_path);
     $new_file->bindParam(':adatum', $file_adatum);
-    $new_file->bindParam(':n_id', $file_nid);
+    $new_file->bindParam(':nid', $file_nid);
 ?>
