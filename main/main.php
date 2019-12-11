@@ -6,7 +6,6 @@
     $get_files-> bindParam(':nid', $nid);
     $get_files->execute();
     $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($res);
 ?>
 
 <!DOCTYPE html>
