@@ -60,44 +60,40 @@ $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
     <!-- Side Bars -->
     <div class="left">
         <div class="sidebar">
-
-
+            <button>Placeholder</button>
+            <button>Placeholder</button>
+            <button>Placeholder</button>
         </div>
     </div>
 
 
     <div class="filetable">
         <table>
-            <div class="table-head">
-                <thead>
+            <thead>
+            <tr>
+                <th class="icon">Icon</th>
+                <th class="name">Name</th>
+                <th class="datum">Bearbeitet</th>
+                <th class="button">Buttons</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($res as $file) { ?>
                 <tr>
-                    <th class="icon">Icon</th>
-                    <th class="name">Name</th>
-                    <th class="datum">Bearbeitet</th>
-                    <th class="button">Buttons</th>
-                </tr>
-                </thead>
-            </div>
-            <div class="table-body">
-                <tbody>
-                <?php foreach ($res as $file) { ?>
-                    <tr>
-                        <td class="icon">Icon</td>
-                        <td class="name"><?= $file['Name'] ?></td>
-                        <td class="datum"><?= ($file['BDatum'] != NULL ? $file['BDatum'] : $file['ADatum']) ?></td>
-                        <td class="button">
-                            <div class="dropdown">
-                                <button onclick="openDropdown()" class="dropbtn">...</button>
-                                <div id="btnDropdown" class="dropdown-content">
-                                    <a href="./aboveclouds/files/download.php">Download</a>
-                                    <a href="./aboveclouds/files/delete.php">Delete</a>
-                                </div>
+                    <td class="icon">Icon</td>
+                    <td class="name"><?= $file['Name'] ?></td>
+                    <td class="datum"><?= ($file['BDatum'] != NULL ? $file['BDatum'] : $file['ADatum']) ?></td>
+                    <td class="button">
+                        <div class="dropdown">
+                            <button onclick="openDropdown()" class="dropbtn">...</button>
+                            <div id="btnDropdown" class="dropdown-content">
+                                <a href="./aboveclouds/files/download.php">Download</a>
+                                <a href="./aboveclouds/files/delete.php">Delete</a>
                             </div>
-                        </td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </div>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
         </table>
     </div>
 
@@ -109,12 +105,75 @@ $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
             </form>
         </div>
     </div>
-
-    <div class="main-footer">
-
-    </div>
 </div>
 
+<div class="main-footer">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-item">
+                        <div class="footer-heading">
+                            <h2>Über uns</h2>
+                        </div>
+                        <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere
+                            Studenten
+                            weltweit richten soll!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-item">
+                        <div class="footer-heading">
+                            <h2></h2>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-item">
+                        <div class="footer-heading">
+                            <h2></h2>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-item">
+                        <div class="footer-heading">
+                            <h2>Mehr Informationen</h2>
+                        </div>
+                        <ul class="footer-list">
+                            <li>Email: <a href="#">kontakt@aboveclouds.online</a></li>
+                            <li>Support: <a href="#">support@aboveclouds.online</a></li>
+                            <li>Website: <a href="#">www.AboveClouds.online</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="sub-footer">
+                        <p>Copyright &copy; 2019 AboveClouds Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

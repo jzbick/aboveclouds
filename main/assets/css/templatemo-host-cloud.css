@@ -291,28 +291,24 @@ header {
 
 .main-container {
     display: grid;
-    position: center;
+    background-color: #F7F9FA;
     width: 100%;
     height: 100%;
-    grid-template-columns: [sidebar-left] 15% [tabl] 70% [sidebar-right] 15% [sidebar-right-end];
-    grid-template-rows: [head] 11% [tabl-head] 5% [tabl] 70% [foot] 10%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 0.5fr 3fr;
 }
 
 .main-header {
-    display: inline-grid;
-    position: absolute;
-    height: 11%;
-    grid-column: sidebar-left/sidebar-right-end;
-    grid-row: head/tabl;
-    background-color: lightgrey !important;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    position:absolute;
 }
 
 .main-header h2 {
-    position: absolute;
-    left: 60px;
-    top: -20px;
-    bottom: 0px;
-    font-size: 125px;
+    position:absolute;
+    left: 2.5%;
+    top: 12.5%;
+    font-size: 110px;
 }
 
 .cloud {
@@ -325,57 +321,32 @@ header {
     float: left;
 }
 
-.main-footer {
-    display: inline-grid;
-    grid-column: sidebar-left/sidebar-right-end;
-    grid-row: foot;
-    background-color: darkblue;
-    height: 100%;
-    width: 100%;
-}
-
-
 .sidebar {
     display: flex;
-    box-sizing: border-box;
-    background: lightgrey;
-    height: 100%;
-    width: 15%;
     text-align: center;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .left {
-    display: inline-grid;
-    grid-column: sidebar-left/tabl;
-    grid-row: tabl-head/foot;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 .right {
-    display: inline-grid;
-    grid-column: sidebar-right/sidebar-right-end;
-    grid-row: tabl-head/foot;
+    grid-column: 3/4;
+    grid-row: 2/3;
 }
 
+.sidebar button{
+    padding: 7.5px 20px;
+    margin: 2.5% 5%;
+}
 .filetable {
-    display: inline-grid;
-    grid-column: tabl/sidebar-right;
-    grid-row: tabl-head/foot;
-    float: right;
-}
 
-.filetable .table-head {
-    display: inline-grid;
-    grid-column: tabl/sidebar-right;
-    grid-row: tabl-head/tabl;
-}
+    grid-column: 2/3;
+    grid-row: 2/3;
 
-.filetable .table-body {
-    display: inline-grid;
-    grid-column: tabl/sidebar-right;
-    grid-row: tabl/foot;
 }
 
 .filetable table, th, td {
@@ -396,6 +367,7 @@ header {
 
 .filetable table {
     background-color: white;
+    width: 100%;
 }
 
 .filetable .icon {
