@@ -1,3 +1,3 @@
-function openDropdown() {
-    document.getElementById('btnDropdown').classList.toggle('show');
+function openDropdown(file_name) {
+    document.getElementById(file_name).classList.toggle('show');
 }
