@@ -12,7 +12,7 @@ body {
 }
 
 p {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 14px;
     color: #6a6a6a;
     line-height: 25px;
@@ -29,7 +29,7 @@ a.main-button {
     display: inline-block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 25px;
+    padding: 0 25px;
     border: none;
     margin-left: 10px;
     background-color: darkblue;
@@ -51,7 +51,7 @@ a.gradient-button {
     display: inline-block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 25px;
+    padding: 0 25px;
     border: none;
     margin-left: 10px;
     background: rgb(114, 2, 187);
@@ -79,7 +79,7 @@ a.gradient-button:hover {
     font-weight: 500;
     letter-spacing: 0.5px;
     display: inline-block;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .section-heading h2 {
@@ -101,7 +101,7 @@ a.gradient-button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 230px 0px 180px 0px;
+    padding: 230px 0 180px 0;
 }
 
 .page-heading h1 {
@@ -228,7 +228,7 @@ header {
 
 .background-header {
     background-color: #fff !important;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .background-header .navbar-brand h2 {
@@ -291,8 +291,7 @@ header {
 
 .main-container {
     display: grid;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 0.5fr 3fr;
 }
@@ -308,7 +307,7 @@ header {
 .main-header h2 {
     position:absolute;
     left: 2.5%;
-    top: 12.5%;
+    top: -5%;
     font-size: 110px;
 }
 
@@ -327,7 +326,6 @@ header {
     background-color: #F7F9FA;
     text-align: center;
     flex-direction: column;
-    height: 660px;
     justify-content: space-evenly;
 }
 
@@ -420,7 +418,7 @@ header {
 }
 
 .navbar .navbar-nav .nav-item {
-    margin: 0px 15px;
+    margin: 0 15px;
 }
 
 .navbar .navbar-nav a.nav-link {
@@ -450,7 +448,7 @@ header {
     background-color: #fff;
     height: 36px;
     outline: none;
-    border-radius: 0px;
+    border-radius: 0;
     position: absolute;
     right: 30px;
     top: 20px;
@@ -549,7 +547,7 @@ header {
 .banner .caption h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 50px;
     font-size: 32px;
     font-weight: 700;
@@ -571,7 +569,7 @@ header {
     height: 49px;
     background-color: transparent;
     border: 1px solid #fff;
-    padding: 0px 15px;
+    padding: 0 15px;
     color: #fff;
     outline: none;
     font-size: 14px;
@@ -588,7 +586,7 @@ header {
     display: inline-block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: none;
     margin-left: 10px;
     background-color: darkblue;
@@ -618,7 +616,7 @@ header {
 }
 
 #search-section ul li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #search-section input[type=checkbox] {
@@ -660,7 +658,7 @@ header {
 
 /* Trusted Style */
 .trusted-section {
-    padding: 50px 0px 40px 0px;
+    padding: 50px 0 40px 0;
     background-color: #f7f7f7;
 }
 
@@ -755,7 +753,7 @@ header {
     text-align: center;
     padding: 50px 50px 30px 50px;
     position: relative;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-item h4 {
@@ -775,7 +773,7 @@ header {
 .pricing-item .price {
     background-color: #00bcd4;
     width: 100%;
-    padding: 30px 0px;
+    padding: 30px 0;
     margin-bottom: 35px;
 }
 
@@ -784,8 +782,8 @@ header {
     color: #fff;
     font-weight: 900;
     letter-spacing: 0.5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .pricing-item .price span {
@@ -800,7 +798,7 @@ header {
     width: 100%;
     height: 1px;
     background-color: #eee;
-    margin: 35px 0px 30px 0px;
+    margin: 35px 0 30px 0;
 }
 
 .pricing-item ul {
@@ -850,7 +848,7 @@ header {
 }
 
 .features-section .feature-item {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 30px;
@@ -882,7 +880,7 @@ header {
 .testimonials-section {
     margin-top: 140px;
     background-color: #f7f7f7;
-    padding: 100px 0px;
+    padding: 100px 0;
 }
 
 .testimonials-section .section-heading {
@@ -924,7 +922,7 @@ header {
     font-weight: 700;
     color: #1e1e1e;
     letter-spacing: 0.5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .testimonial-item span {
@@ -972,7 +970,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 80px 0px 60px 0px;
+    padding: 80px 0 60px 0;
 }
 
 footer .footer-heading h2 {
@@ -1002,7 +1000,7 @@ footer ul li {
 }
 
 footer ul li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 footer ul li a {
@@ -1030,7 +1028,7 @@ footer .sub-footer a {
 
 /* About Us Page Style */
 .about-us {
-    padding: 140px 0px;
+    padding: 140px 0;
     background-color: #f7f7f7;
 }
 
@@ -1058,7 +1056,7 @@ footer .sub-footer a {
 }
 
 #tabs {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #tabs ul {
@@ -1072,7 +1070,7 @@ footer .sub-footer a {
 }
 
 #tabs ul li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #tabs ul li a {
@@ -1108,7 +1106,7 @@ footer .sub-footer a {
     font-size: 14px;
     color: #7a7a7a;
     margin-top: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 
@@ -1151,7 +1149,7 @@ footer .sub-footer a {
     font-weight: 700;
     color: #1e1e1e;
     letter-spacing: 0.5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .team-item span {
@@ -1229,7 +1227,7 @@ footer .sub-footer a {
     display: inline-block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: none;
     background-color: #00bcd4;
     color: #fff;
@@ -1260,7 +1258,7 @@ footer .sub-footer a {
 }
 
 .contact-us .right-content ul li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .contact-us .right-content ul i {
@@ -1343,7 +1341,7 @@ footer .sub-footer a {
     }
 
     .banner #search-section fieldset button {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .banner #search-section fieldset input {
@@ -1368,7 +1366,7 @@ footer .sub-footer a {
         width: 100%;
         text-align: center;
         background-color: #fff;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
 
     .navbar .navbar-nav .nav-item {
@@ -1380,7 +1378,7 @@ footer .sub-footer a {
     }
 
     .navbar .navbar-nav a.nav-link {
-        padding: 15px 0px;
+        padding: 15px 0;
         color: #1e1e1e !important;
     }
 
@@ -1390,16 +1388,16 @@ footer .sub-footer a {
 
     .about-us .left-image {
         margin-bottom: 30px;
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     .about-us .right-content,
     .contact-us .right-content {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .contact-us .contact-form {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 45px;
     }
 
@@ -1413,7 +1411,7 @@ footer .sub-footer a {
     }
 
     .contact-us .right-content ul li i {
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
@@ -1435,12 +1433,12 @@ footer .sub-footer a {
 @media (max-width: 576px) {
     .functional-buttons ul li:first-child a {
         padding: 6px 10px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 
     .functional-buttons ul li:last-child a {
         padding: 6px 10px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 
     .functional-buttons {
@@ -1458,6 +1456,6 @@ footer .sub-footer a {
 
     .background-header .functional-buttons ul li:first-child a {
         padding: 6px 10px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 }
