@@ -145,6 +145,6 @@ echo '<br>';
 echo $reg_complete;
 ?>
 
-<?php include __DIR__ . '/templates/html_End.php'; ?>
+<?php include __DIR__ . '/templates/body_End.php'; ?>
 
 <?php include __DIR__ . '/templates/html_End.php'; ?>
