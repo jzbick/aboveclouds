@@ -5,27 +5,8 @@ by the AboveClouds Dev-Team
 **/
 @import url('https://fonts.googleapis.com/css?family=Roboto:700|Rubik&display=swap');
 
-body{
-	width: 100%;
-}
 input{
 	overflow: visible;
-}
-
-.button{
-	padding: 5px 10px;
-	text-align: center;
-	font-size: 1.2em;
-	border-radius: 12px;
-	margin: 2px 2px;
-}
-.blue {
-	background-color: #008CEA; 
-	color: white; 
-	border: 1px solid #FFFFFF;
-}
-.blue:hover {
-	background-color: #12c8e0;
 }
 .versteckt {
 	display: none;
@@ -48,49 +29,41 @@ input{
 	width: 100%;
 }
 .inputFeld {
-	width: 100%;
 	font-size: 24px;
 	line-height: 1.5;
 	display: block;
-	height: 60px;
-	border-radius: 30px;
+	height: 48px;
+	border-radius: 24px;
 	background: #FFFFFF;
-	padding: 0 30px 0 60px;
+	text-align: center;
 }
-.login-div-cont {
-	width: 500px;
-	display: flex;
-	background: transparent;
-	align-items: center;
-	justify-content: center;
+.inputFeld:focus {
+	text-align: left;
+	padding-left: 10px;
 }
-.login-button {
-	width: 100%;
-	font-size: 24px;
-	height: 60px;
-	border-radius: 30px;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+.regButton {	
+	margin: auto;
 }
 .login-form{
 	width: 100%;
 	margin: 0 auto;
 }
-.pad-top40 {
+.ContainerReg{
+	width: 60%;
+	background-color: tomato;
+	margin-left: 20%;
 	padding-top: 40px;
+	margin-top: 40px;
 }
-.pad-top180 {
-	padding-top: 180px;
-}
-.pad-bot40 {
+.AreaSubmit {
+	margin-top: 40px;
 	padding-bottom: 40px;
 }
-.mar-bot20 {
-	margin-bottom: 20px;
+.AreaInput {
+	padding-top: 80px;
 }
-.mar-bot180 {
-	margin-bottom: 180px;
+.center {
+	margin: auto;
 }
 .txt-c {
 	text-align: center;
@@ -101,12 +74,6 @@ input{
 .h-full {
 	height: 100%;
 }
-/** ENDE */
-
-/** 
-Baustelle:
--> Nicht benötigte EInträge, bzw. zu Testzwecken
-**/
 
 
 /** EOF */
