@@ -310,6 +310,14 @@ header {
     top: -5%;
     font-size: 110px;
 }
+.main-header .profil{
+    border-radius: 50px;
+    position: absolute;
+    right: 2.5%;
+    top: 25%;
+    height: 40%;
+    width: 3.0%;
+}
 
 .cloud {
     color: darkblue;

@@ -10,5 +10,4 @@ try {
 } catch (PDOException $e) {
     echo 'Verbindung zur Datenbank fehlgeschlagen: ' . $e->getMessage();
 }
-
 ?>
