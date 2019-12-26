@@ -81,6 +81,7 @@ if ($reg_complete == 1) {
     //Create Cookie
     include __DIR__ . '/templates/getNID.php';
     setcookie("N_ID", $resultNID, time()+1800);
+    setcookie("pwd", $encryptPWD, time()+1800);
     //
 
     //Redirect
