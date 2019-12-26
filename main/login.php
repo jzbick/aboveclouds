@@ -3,7 +3,15 @@ $TitelDerSeite = "AboveClouds Login";
 include __DIR__ . '/templates/html_Header.php';
 
 $loginHappening = 1;
-// to-Do: ?check Cookie or Session?
+// check Cookie
+if (isset($_COOKIE['pwd']) and isset($_COOKIE['N_ID']))
+{
+    // Redirect
+    $var_redirect = "main.php";
+    header('Location:' . $var_redirect );
+    exit();
+}
+
 ?>
 
 <?php
@@ -39,6 +47,7 @@ if ($loginHappening == 1) {
        // set cookie
        include __DIR__ . '/templates/getNID.php';
        setcookie("N_ID", $resultNID, time()+1800);
+       setcookie("pwd", $encryptPWD, time()+1800);
        //
        // Redirect
        $var_redirect = "main.php";
