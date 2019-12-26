@@ -3,7 +3,15 @@ $TitelDerSeite = "AboveClouds Login";
 include __DIR__ . '/templates/html_Header.php';
 
 $loginHappening = 1;
-// ?check Cookie or Session?
+// check Cookie
+if (isset($_COOKIE['pwd']) and isset($_COOKIE['N_ID']))
+{
+    // Redirect
+    $var_redirect = "main.php";
+    header('Location:' . $var_redirect );
+    exit();
+}
+
 ?>
 
 <?php
@@ -13,41 +21,40 @@ $loginHappening = 1;
 if (isset($_POST['email']) and $_POST['email'] != "") {
     $var_mail = $_POST['email'];
 } else {
-    // No E-Mail found
+    // No E-Mail found -> do nothing
     $loginHappening = 0;
 }
 
 //PASSWORD
 if (isset($_POST['pwd']) and $_POST['pwd'] != "") {
-    $encryptPWD = password_hash($_POST['pwd'], PASSWORD_BCRYPT);
+    $encryptPWD = sha1($_POST['pwd']);
 } else {
-    // No Password found
+    // No Password found -> do nothing
     $loginHappening = 0;
 }
 
 if ($loginHappening == 1) {
     //Login...
-    //Check DB PWD
+    //Prepare Check DB PWD
     include __DIR__ . '/templates/checkPWD.php';
 
     //get DB PW
     $getCheckValue->execute();
     $checkValue=$getCheckValue->fetchColumn();
-    $testVerify = password_verify($_POST['pwd'], $encryptPWD);
 
     //compare PWD
     if($encryptPWD == $checkValue) {
+       // set cookie
+       include __DIR__ . '/templates/getNID.php';
+       setcookie("N_ID", $resultNID, time()+1800);
+       setcookie("pwd", $encryptPWD, time()+1800);
+       //
        // Redirect
-       // $var_redirect = "main.php";
-       // header('Location:' . $var_redirect );
-       // exit();
+       $var_redirect = "main.php";
+       header('Location:' . $var_redirect );
+       exit();
     } else {
         //PASSWORD WRONG
-        echo $encryptPWD ;
-        echo '<br>';
-        echo $checkValue ;
-        echo '<br>';
-        echo $testVerify ;
     }
 }
 
@@ -81,3 +88,8 @@ if ($loginHappening == 1) {
     </div>
 </form>
 
+
+
+<?php include __DIR__ . '/templates/body_End.php'; ?>
+
+<?php include __DIR__ . '/templates/html_End.php'; ?>

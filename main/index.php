@@ -68,7 +68,7 @@
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a href="main.php">Anmelden</a></li>
+                    <li><a href="login.php">Anmelden</a></li>
                     <li><a href="regUser.php">Registrieren</a></li>
                 </ul>
             </div>

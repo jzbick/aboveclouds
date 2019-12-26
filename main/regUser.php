@@ -54,7 +54,7 @@ if (isset($_POST['pwd']) and
     $_POST['pwd-verify'] != "" and 
     $_POST['pwd'] == $_POST['pwd-verify']) 
     {   //create PWD-Hash
-        $encryptPWD = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
+        $encryptPWD = sha1($_POST['pwd']);
 } else {
     //Two different Passwords
     $reg_complete=0;
@@ -78,8 +78,11 @@ if ($reg_complete == 1) {
     include __DIR__ . '/templates/newUser.php';
     $nutzeranlegen->execute();
 
-    //Create SESSION Variable
-    //$_SESSION['Testwert'] = "complete";
+    //Create Cookie
+    include __DIR__ . '/templates/getNID.php';
+    setcookie("N_ID", $resultNID, time()+1800);
+    setcookie("pwd", $encryptPWD, time()+1800);
+    //
 
     //Redirect
     $var_redirect = "main.php";
