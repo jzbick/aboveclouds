@@ -90,8 +90,8 @@ if (isset($_SESSION['N_ID'])) {
                                 <div class="dropdown">
                                     <button onclick="openDropdown('<?= $file['Name'] ?>')" class="dropbtn">...</button>
                                     <div id="<?= $file['Name'] ?>" class="dropdown-content">
-                                        <a href="../files/download.php?path=<?= $file['Name']; ?>">Download</a>
-                                        <a href="../files/delete.php?path=<?= $file['Name']; ?>">Delete</a>
+                                        <a href="./files/download.php?path=<?= $file['Name']; ?>">Download</a>
+                                        <a href="./files/delete.php?path=<?= $file['Name']; ?>">Delete</a>
                                     </div>
                             </td>
                         </tr>

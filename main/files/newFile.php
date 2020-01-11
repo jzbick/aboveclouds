@@ -1,5 +1,5 @@
 <?php
-include_once './config/config.php';
+include_once '../config/config.php';
 
 $sql = 'INSERT INTO Datei (Name,Pfad,ADatum,N_ID) VALUES (:name,:pfad,:adatum,:nid)';
 

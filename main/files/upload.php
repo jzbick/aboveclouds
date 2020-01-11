@@ -1,5 +1,5 @@
 <?php
-include_once './config/config.php';
+include_once '../config/config.php';
 
 if ($_SESSION['N_ID']) {
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {

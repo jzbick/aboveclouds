@@ -1,5 +1,5 @@
 <?php
-include_once './config/config.php';
+include_once '../config/config.php';
 
 $sql = 'DELETE FROM Datei WHERE Pfad = :pfad';
 
