@@ -10,4 +10,4 @@ if (file_exists($file_path)) {
     $delete_file->execute();
 }
 
-// header('Location: ../main.php');
+header('Location: ../main.php');
