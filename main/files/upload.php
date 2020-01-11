@@ -21,4 +21,4 @@ if ($_SESSION['N_ID']) {
 } else {
     header('Location: http://aboveclouds.online/');
 }
-header('Location: ../main/main.php');
+header('Location: ../main.php');
