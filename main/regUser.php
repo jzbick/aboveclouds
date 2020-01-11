@@ -78,19 +78,12 @@ if ($reg_complete == 1) {
     include __DIR__ . '/templates/newUser.php';
     $nutzeranlegen->execute();
 
-    //Create Cookie
-    include __DIR__ . '/templates/getNID.php';
-    setcookie("N_ID", $resultNID, time() + 1800);
-    setcookie("pwd", $encryptPWD, time() + 1800);
-    //
-
     //Redirect
-    $var_redirect = "main.php";
+    $var_redirect = "login.php";
     header('Location:' . $var_redirect);
     exit();
 } else {
-    //No Reg
-    //$_SESSION['Testwert'] = "no Login";
+//
 }
 ?>
 
@@ -136,16 +129,6 @@ if ($reg_complete == 1) {
         </div>
     </div>
 </form>
-
-<?php
-//Ausgabe zum Testen:
-echo '<br>';
-print_r($_POST);
-echo '<br>';
-print_r($_SESSION);
-echo '<br>';
-echo $reg_complete;
-?>
 
 <?php include __DIR__ . '/templates/body_End.php'; ?>
 
