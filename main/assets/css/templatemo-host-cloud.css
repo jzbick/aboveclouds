@@ -1472,3 +1472,21 @@ footer .sub-footer a {
         letter-spacing: 0;
     }
 }
+
+/**
+    AboveClouds CSS Merge
+**/
+.login-img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+	align-content: center;
+	justify-content: center;
+	background-color: #12c8e0;
+	border: 2px solid #12c8e0;
+}
+.login-img img {
+	width: 100%;
+}
