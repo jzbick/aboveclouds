@@ -1,12 +1,14 @@
 <?php
-include '../config/config.php';
+include './config/config.php';
 
 $sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 5';
-$nid = $_COOKIE['N_ID'];
-$get_files = $dbc->prepare($sql_files);
-$get_files->bindParam(':nid', $nid);
-$get_files->execute();
-$res = $get_files->fetchAll(PDO::FETCH_ASSOC);
+if (isset($_SESSION['N_ID'])) {
+    $nid = $_SESSION['N_ID'];
+    $get_files = $dbc->prepare($sql_files);
+    $get_files->bindParam(':nid', $nid);
+    $get_files->execute();
+    $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
