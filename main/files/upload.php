@@ -3,7 +3,7 @@ include_once '../config/config.php';
 
 if ($_SESSION['N_ID']) {
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
-        $uploaddir = '../userfiles/' . $_SESSION['N_ID'] . '/';
+        $uploaddir = USERFILE_DIR . '/' . $_SESSION['N_ID'] . '/';
         $uploadfile = $uploaddir . basename($_FILES['userfile']['name'][$i]);
         $file_name = $_FILES['userfile']['name'][$i];
         $file_path = $uploadfile;
