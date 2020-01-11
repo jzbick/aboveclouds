@@ -60,8 +60,9 @@ if (isset($_SESSION['N_ID'])) {
         <h2><a href="index.php"><span class="cloud">&#9729;</span></a></h2>
             <img onclick="openDropdownImg()" class="profil" src="assets/images/Bender-Profil.png">
             <div id="ImgDropdown" class="dropdown-content">
-                <a href="">Profil</a>
-                <a href="">Einstellungen</a>
+                <a href="Profil.php">Profil</a>
+                <a href="Einstellung.php">Einstellungen</a>
+                <a href="index.php">Abmelden</a>
             </div>
     </header>
 

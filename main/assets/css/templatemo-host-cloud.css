@@ -329,6 +329,11 @@ header {
     float: left;
 }
 
+#ImgDropdown{
+    top: 70%;
+    right: 1%;
+}
+
 .sidebar {
     display: flex;
     background-color: #F7F9FA;
