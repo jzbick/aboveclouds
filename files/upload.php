@@ -1,4 +1,6 @@
 <?php
+include '../config/config.php';
+
 if ($_COOKIE['N_ID']) {
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
         $uploaddir = '../userfiles/' . $_COOKIE['N_ID'] . '/';

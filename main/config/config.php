@@ -1,5 +1,7 @@
-<?php 
+<?php
 /* Verbindung zur Datenbank herstellen */
+
+session_start();
 
 $db_name = 'mysql:dbname=aboveclouds;host=localhost';
 $db_user = 'aboveclouds';
