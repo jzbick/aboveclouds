@@ -71,7 +71,7 @@ if ($loginHappening == 1) {
             $toCheck = "email";
             include __DIR__ . '/templates/checkTemplate.php';
             ?>
-            <input class="inputFeld center" type="text" name="email" placeholder="E-Mail Adresse">
+            <input class="inputButton center" type="text" name="email" placeholder="E-Mail Adresse">
 
             <br>
 
@@ -79,7 +79,7 @@ if ($loginHappening == 1) {
             $toCheck = "pwd";
             include __DIR__ . '/templates/checkTemplate.php';
             ?>
-            <input class="inputFeld center" type="password" name="pwd" placeholder="Passwort">
+            <input class="inputButton center" type="password" name="pwd" placeholder="Passwort">
         </div>
 
         <div class="AreaSubmit">
