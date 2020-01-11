@@ -1,5 +1,5 @@
 <?php
-include '../config/config.php';
+include './config/config.php';
 
 $sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 5';
 if (isset($_SESSION['N_ID'])) {

@@ -1,5 +1,5 @@
 <?php
-include '../config/config.php';
+include_once './config/config.php';
 
 $TitelDerSeite = "AboveClouds Login";
 include __DIR__ . '/templates/html_Header.php';

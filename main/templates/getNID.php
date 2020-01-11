@@ -1,6 +1,6 @@
 <?php
 /* A prepared Statement -> get N_ID from DB */
-include '../config/config.php';
+include_once './config/config.php';
 
 
 $sql_read_nid = 'SELECT N_ID FROM nutzer WHERE Email = :mail';

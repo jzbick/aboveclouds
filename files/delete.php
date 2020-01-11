@@ -1,5 +1,5 @@
 <?php
-include '../config/config.php';
+include_once './config/config.php';
 
 $file_path = '../userfiles/' . $_COOKIE['N_ID'] . '/' . $_GET['path'];
 if (file_exists($file_path)) {
