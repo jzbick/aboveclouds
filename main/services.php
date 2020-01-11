@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,26 +19,26 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    <!--
 
-Host Cloud Template
+    Host Cloud Template
 
-https://templatemo.com/tm-541-host-cloud
+    https://templatemo.com/tm-541-host-cloud
 
--->
-  </head>
+    -->
+</head>
 
-  <body>
+<body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
 
 <!-- Header -->
 <header class="">
@@ -69,8 +69,14 @@ https://templatemo.com/tm-541-host-cloud
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <?php
+                    if (isset($_SESSION["N_ID"])) {
+                        echo '<li><a href="logout.php">Abmelden</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Anmelden</a></li>';
+                        echo '<li><a href="regUser.php">Registrieren</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -84,7 +90,7 @@ https://templatemo.com/tm-541-host-cloud
         <div class="row">
             <div class="col-md-12">
                 <h1>Our Services</h1>
-                <p><a href="index.php">Home</a> / <span>Our Services</span></p>
+                <p><a href="index.php">Home</a> / <span>Unsere Services</span></p>
             </div>
         </div>
     </div>

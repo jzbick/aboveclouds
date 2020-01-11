@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    <!--
 
-Host Cloud Template
+    Host Cloud Template
 
-https://templatemo.com/tm-541-host-cloud
+    https://templatemo.com/tm-541-host-cloud
 
--->
-  </head>
+    -->
+</head>
 
-  <body>
+<body>
 
 <!-- ***** Preloader Start ***** -->
 <div id="preloader">
@@ -70,8 +70,14 @@ https://templatemo.com/tm-541-host-cloud
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a href="#">Anmelden</a></li>
-                    <li><a href="#">Registrieren</a></li>
+                    <?php
+                    if (isset($_SESSION["N_ID"])) {
+                        echo '<li><a href="logout.php">Abmelden</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Anmelden</a></li>';
+                        echo '<li><a href="regUser.php">Registrieren</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -107,7 +113,8 @@ https://templatemo.com/tm-541-host-cloud
                     <div class="section-heading">
                         <span>Über Uns</span>
                         <h2>Hintergrund unserer Firma</h2>
-                        <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere Studenten weltweit richten soll!</p>
+                        <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere
+                            Studenten weltweit richten soll!</p>
                     </div>
                     <div id='tabs'>
                         <ul>
@@ -122,7 +129,7 @@ https://templatemo.com/tm-541-host-cloud
                                     Es machte sich von der kleinen Anwendung mit nur ein paar Features zu einer der
                                     kompetentesten Anwendung auf dem Markt.
                                     <br><br>Seither begeistert AboveClouds Menschen und vorallem Studenten weltweit und
-                                            hilft dabei das Chaos eines jeden zu ordnen.</p>
+                                    hilft dabei das Chaos eines jeden zu ordnen.</p>
                             </article>
                             <article id='tabs-2'>
                                 <p>Aenean molestie, odio quis viverra ultricies, leo tellus lacinia neque, sit amet
@@ -159,8 +166,9 @@ https://templatemo.com/tm-541-host-cloud
                 <div class="section-heading">
                     <span>Unser Team</span>
                     <h2>Triff das Team</h2>
-                    <p>Das AboveClouds-Team. Bestehend aus den drei interessantesten Menschen die sie jemals kennenlernen werden. Ausgezeichnet durch
-                       ihre Fähigkeiten, ihr Wissen und ihr können sich in jeder Situation zu recht zu finden. </p>
+                    <p>Das AboveClouds-Team. Bestehend aus den drei interessantesten Menschen die sie jemals
+                        kennenlernen werden. Ausgezeichnet durch
+                        ihre Fähigkeiten, ihr Wissen und ihr können sich in jeder Situation zu recht zu finden. </p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
