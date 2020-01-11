@@ -1,14 +1,15 @@
 <?php
+include '../config/config.php';
+
 $TitelDerSeite = "AboveClouds Login";
 include __DIR__ . '/templates/html_Header.php';
 
 $loginHappening = 1;
 // check Cookie
-if (isset($_COOKIE['pwd']) and isset($_COOKIE['N_ID']))
-{
+if (isset($_COOKIE['pwd']) and isset($_COOKIE['N_ID'])) {
     // Redirect
     $var_redirect = "main.php";
-    header('Location:' . $var_redirect );
+    header('Location:' . $var_redirect);
     exit();
 }
 
@@ -40,19 +41,18 @@ if ($loginHappening == 1) {
 
     //get DB PW
     $getCheckValue->execute();
-    $checkValue=$getCheckValue->fetchColumn();
+    $checkValue = $getCheckValue->fetchColumn();
 
     //compare PWD
-    if($encryptPWD == $checkValue) {
-       // set cookie
-       include __DIR__ . '/templates/getNID.php';
-       setcookie("N_ID", $resultNID, time()+1800);
-       setcookie("pwd", $encryptPWD, time()+1800);
-       //
-       // Redirect
-       $var_redirect = "main.php";
-       header('Location:' . $var_redirect );
-       exit();
+    if ($encryptPWD == $checkValue) {
+        // set cookie
+        include __DIR__ . '/templates/getNID.php';
+        $_SESSION['N_ID'] = $resultNID;
+        //
+        // Redirect
+        $var_redirect = "main.php";
+        header('Location:' . $var_redirect);
+        exit();
     } else {
         //PASSWORD WRONG
     }
@@ -63,27 +63,27 @@ if ($loginHappening == 1) {
 <form class="login-form" action="" method="post">
     <div class="ContainerReg">
         <div class="login-img">
-	        <img src=".\assets\images\aboveclouds_logo.png" alt="AVATAR">
+            <img src=".\assets\images\aboveclouds_logo.png" alt="AVATAR">
         </div>
 
         <div class="AreaInput">
-            <?php 
+            <?php
             $toCheck = "email";
             include __DIR__ . '/templates/checkTemplate.php';
             ?>
             <input class="inputFeld center" type="text" name="email" placeholder="E-Mail Adresse">
-            
+
             <br>
 
-            <?php 
+            <?php
             $toCheck = "pwd";
             include __DIR__ . '/templates/checkTemplate.php';
             ?>
             <input class="inputFeld center" type="password" name="pwd" placeholder="Passwort">
         </div>
-        
+
         <div class="AreaSubmit">
-    	    <input type="submit" name="loginAction" class="inputFeld regButton" value="Anmelden" />
+            <input type="submit" name="loginAction" class="inputFeld regButton" value="Anmelden" />
         </div>
     </div>
 </form>
