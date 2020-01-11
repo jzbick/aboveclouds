@@ -102,7 +102,7 @@ if (isset($_SESSION['N_ID'])) {
 
         <div class="right">
             <div class="sidebar">
-                <form enctype="multipart/form-data" method="post" action="../files/upload.php">
+                <form enctype="multipart/form-data" method="post" action="./files/upload.php">
                     <input type="file" name="userfile[]" multiple="multiple">
                     <button type="submit">Hochladen</button>
                 </form>
