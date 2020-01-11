@@ -62,7 +62,7 @@ if (isset($_SESSION['N_ID'])) {
             <div id="ImgDropdown" class="dropdown-content">
                 <a href="Profil.php">Profil</a>
                 <a href="Einstellung.php">Einstellungen</a>
-                <a href="index.php">Abmelden</a>
+                <a href="logout.php">Abmelden</a>
             </div>
         </header>
 
