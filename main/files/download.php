@@ -1,7 +1,7 @@
 <?php
 include_once '../config/config.php';
-
-$file_path = USERFILE_DIR . '/' . $_SESSION['N_ID'] . '/' . $_GET['path'];
+include_once './getPath.php';
+$file_path = getPath($_GET['did'], $dbc);
 if (file_exists($file_path)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
