@@ -12,3 +12,5 @@ try {
 } catch (PDOException $e) {
     echo 'Verbindung zur Datenbank fehlgeschlagen: ' . $e->getMessage();
 }
+
+define('USERFILE_DIR', __DIR__ . '/../../userfiles');
