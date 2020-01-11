@@ -1490,3 +1490,10 @@ footer .sub-footer a {
 .login-img img {
 	width: 100%;
 }
+.inputButton {
+    height: 48px;
+    border-radius: 24px;
+}
+.inputButton:focus {
+    padding-left: 10px;
+}
