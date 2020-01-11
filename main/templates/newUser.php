@@ -1,6 +1,6 @@
 <?php
 /* Ein prepared Statement für die Registrierung auf der Website -> Nutzer anlegen */
-include __DIR__ . '/../config/datenbankzugriff.php';
+include __DIR__ . '/../config/config.php';
 
 $sql_user = 'INSERT INTO nutzer (Vorname, Nachname, Passwort, Email, RDatum) VALUES (:vorname, :nachname, :pwd, :mail, :rdatum)';
 
@@ -11,5 +11,3 @@ $nutzeranlegen->bindParam(':nachname', $var_nachname);
 $nutzeranlegen->bindParam(':pwd', $var_pwd);
 $nutzeranlegen->bindParam(':mail', $var_mail);
 $nutzeranlegen->bindParam(':rdatum', $var_rdatum);
-
-?>
