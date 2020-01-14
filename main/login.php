@@ -134,73 +134,41 @@ if ($loginHappening == 1) {
     </nav>
 </header>
 
-<div class="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="header-text caption">
-                    <form class="login-form" action="" method="post">
-                        <div class="ContainerReg">
-                            <div class="login-img">
-                                <img src="assets/images/aboveclouds_logo.png" alt="AVATAR">
-                            </div>
-
-                            <div class="AreaInput">
+<div class="login">
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="header-text caption">
+                        <form class="login-form" action="" method="post">
+                            <div class="ContainerReg">
+                                <div class="AreaInput">
+                                    <?php
+                                    $toCheck = "email";
+                                    include __DIR__ . '/templates/checkTemplate.php';
+                                    ?>
+                                    <input class="inputFeld center" type="text" name="email"
+                                           placeholder="E-Mail Adresse">
+                                    <br>
+                                </div>
                                 <?php
-                                $toCheck = "email";
+                                $toCheck = "pwd";
                                 include __DIR__ . '/templates/checkTemplate.php';
                                 ?>
-                                <input class="inputButton center" type="text" name="email" placeholder="E-Mail Adresse">
-                                <br>
+                                <input class="inputFeld center" type="password" name="pwd" placeholder="Passwort">
                             </div>
-                            <?php
-                            $toCheck = "pwd";
-                            include __DIR__ . '/templates/checkTemplate.php';
-                            ?>
-                            <input class="inputButton center" type="password" name="pwd" placeholder="Passwort">
-                        </div>
 
-                        <div class="AreaSubmit">
-                            <input type="submit" name="loginAction" class="inputFeld regButton" value="Anmelden"/>
-                        </div>
+                            <div class="AreaSubmit">
+                                <input type="submit" name="loginAction" class="inputFeld regButton" value="Anmelden"/>
+                            </div>
+                    </div>
+
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 
-<!-- Footer Starts Here -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-item">
-                    <div class="footer-heading">
-                        <h2>Über uns</h2>
-                    </div>
-                    <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere Studenten
-                        weltweit richten soll!</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-item">
-                    <div class="footer-heading">
-                        <h2></h2>
-                    </div>
-                    <ul class="footer-list">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
