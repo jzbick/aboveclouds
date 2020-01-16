@@ -102,9 +102,22 @@ if (isset($_SESSION['N_ID'])) {
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="header-text caption">
-                    <h2>Überprüfen Sie Ihre Emailadresse</h2>
+                <?php
+                    if (isset($_POST['q']) and $_POST['q'] != "") {
+                        //searching Email
+                        $checkMailTarget = $_POST['q'];
+                        include __DIR__ . '/templates/getMail.php';
+                        if ($checkMailTarget == $resultMail) {
+                            echo '<h2>Ihre Mailadresse ' . $checkMailTarget . ' ist leider schon auf unserer Seite registriert...</h2>';
+                        } else {
+                            echo '<h2>Die Mail ' . $checkMailTarget . ' ist noch nicht registriert. Wollen Sie eine weitere Suche starten?</h2>';
+                        }
+                    } else {
+                        echo '<h2>Überprüfen Sie, ob Sie sich mit Ihrer Emailadresse bei uns registrieren können...</h2>';
+                    }
+                ?>
                     <div id="search-section">
-                        <form id="suggestion_form" name="gs" method="get" action="#">
+                        <form id="suggestion_form" name="gs" method="post">
                             <div class="searchText">
 
                                 <input type="text" name="q" class="searchText"
