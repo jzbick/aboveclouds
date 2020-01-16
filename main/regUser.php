@@ -1,5 +1,5 @@
 <?php
-include_once './config/config.php';
+include_once __DIR__ . '/config/config.php';
 
 $TitelDerSeite = "Bei AboveClouds registrieren";
 $reg_complete = 1;
@@ -27,7 +27,13 @@ if (isset($_POST['nachname']) and $_POST['nachname'] != "") {
 
 //E-Mail
 if (isset($_POST['email']) and $_POST['email'] != "") {
-    //
+    //Now checking if email is already in use
+    $checkMailTarget = $_POST['email'];
+    include __DIR__ . '/templates/getMail.php';
+    if ($checkMailTarget == $resultMail) {
+        $reg_complete = 0;
+        $MailAlreadyInUse = 1;
+    }
 } else {
     $reg_complete = 0;
 }
@@ -83,7 +89,7 @@ if ($reg_complete == 1) {
     header('Location:' . $var_redirect);
     exit();
 } else {
-//
+//    Problem detected...
 }
 ?><!DOCTYPE html>
 <html>
