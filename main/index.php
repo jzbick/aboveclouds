@@ -1,4 +1,13 @@
-<?php include_once './config/config.php'; ?>
+<?php include_once __DIR__ . '/config/config.php'; ?>
+
+<?php 
+// When deleted no Redirect when User is logged in
+if (isset($_SESSION['N_ID'])) {
+    $var_redirect = "main.php";
+    header('Location:' . $var_redirect);
+    exit();
+} 
+?>
 
 <!DOCTYPE html>
 <html>

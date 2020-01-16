@@ -1,12 +1,12 @@
 <?php
-include_once './config/config.php';
+include_once __DIR__ . '/config/config.php';
 
 $TitelDerSeite = "AboveClouds Login";
 include __DIR__ . '/templates/html_Header.php';
 
 $loginHappening = 1;
-// check Cookie
-if (isset($_COOKIE['pwd']) and isset($_COOKIE['N_ID'])) {
+// check for Session Variable
+if (isset($_SESSION['N_ID'])) {
     // Redirect
     $var_redirect = "main.php";
     header('Location:' . $var_redirect);
