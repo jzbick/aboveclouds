@@ -60,10 +60,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">Über uns</a>
+                        <a class="nav-link" href="about.php">Über Uns</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.php">Unsere Dienste</a>
+                        <a class="nav-link" href="services.php">Dienste</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="contact.php">Kontakt</a>
@@ -111,28 +111,34 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Your name" required="">
+                                    <input name="name" type="text" id="name" placeholder="  Name" required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-12 col-sm-12">
                                 <fieldset>
-                                    <input name="email" type="text" id="email" placeholder="Your email" required="">
+                                    <input name="email" type="text" id="email" placeholder="Email" required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-12 col-sm-12">
                                 <fieldset>
-                                    <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    <input name="subject" type="text" id="subject" placeholder="Betreff">
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <textarea name="message" rows="6" id="message" placeholder="Your message"
+                                    <textarea name="message" rows="6" id="message" placeholder="Nachricht"
                                               required=""></textarea>
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                                    <button type="submit" id="form-submit" class="main-button">Senden</button>
+                                    <?php
+                                    mail(
+                                        "kontakt@aboveclouds.online",
+                                        "$_POST[subject]",
+                                        "$_POST[message]",
+                                        "From: Absender <$_POST[email]>"); ?>
                                 </fieldset>
                             </div>
                         </div>
@@ -142,22 +148,18 @@
             <div class="col-md-6">
                 <div class="right-content">
                     <div class="section-heading">
-                        <span>Contact Us</span>
-                        <h2>Let's keep in touch</h2>
-                        <p>Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at
-                            feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.</p>
+                        <span>Kontaktieren sie uns</span>
+                        <h2>Bleiben sie in Verbindung</h2>
+                        <p>Bei Problemen, Fragen oder Anmerkungen sind wir gerne für sie da. Schreiben sie uns dafür
+                            einfach eine Email oder rufen sie
+                            unsere Hotline an. Wir helfen ihnen gerne!</p>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <ul>
-                                <li><i class="fa fa-phone"></i> 010-020-0560</li>
-                                <li><i class="fa fa-support"></i> support@company.com</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> contact@company.com</li>
-                                <li><i class="fa fa-globe"></i> www.company.com</li>
+                                <li><i class="fa fa-support"></i>support@aboveclouds.online</li>
+                                <li><i class="fa fa-envelope"></i>kontakt@aboveclouds.online</li>
+                                <li><i class="fa fa-globe"></i>www.AboveClouds.online</li>
                             </ul>
                         </div>
                     </div>
