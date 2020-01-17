@@ -2,12 +2,18 @@
 include './config/config.php';
 
 $sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 5';
+$sql_username = 'SELECT Vorname, Nachname FROM nutzer where N_ID =:nid';
 if (isset($_SESSION['N_ID'])) {
     $nid = $_SESSION['N_ID'];
     $get_files = $dbc->prepare($sql_files);
     $get_files->bindParam(':nid', $nid);
     $get_files->execute();
     $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
+    $get_user = $dbc->prepare($sql_username);
+    $get_user->bindParam(':nid', $nid);
+    $get_user->execute();
+    $res_username = $get_user->fetchAll(0);
+    $username = $res_username[0]['Vorname'] . ' '. $res_username[0]['Nachname'] ;
 }
 ?>
 
@@ -53,7 +59,7 @@ if (isset($_SESSION['N_ID'])) {
         <h2><a href="index.php"><span class="cloud">&#9729;</span></a></h2>
         <img onclick="openDropdownImg()" class="profil" src="assets/images/Bender-Profil.png">
         <div id="ImgDropdown" class="dropdown-content">
-            <a href="Einstellung.php"><? $res['Name']?></a>
+            <a href="Einstellung.php"><?=$username?></a>
             <a href="Einstellung.php">Einstellungen</a>
             <p>------------------------------------------</p>
             <a href="logout.php">Abmelden</a>
