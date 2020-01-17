@@ -23,7 +23,7 @@ a {
     text-decoration: none !important;
 }
 
-a.main-button {
+a.mainmain-button {
     outline: none;
     cursor: pointer;
     display: inline-block;
@@ -299,18 +299,19 @@ header {
 .main-header {
     grid-column: 1/4;
     grid-row: 1/2;
-    position:absolute;
+    position: absolute;
     height: 14.25%;
     background-color: #F7F9FA !important;
 }
 
 .main-header h2 {
-    position:absolute;
+    position: absolute;
     left: 2.5%;
     top: -5%;
     font-size: 110px;
 }
-.main-header .profil{
+
+.main-header .profil {
     border-radius: 50px;
     position: absolute;
     right: 2.5%;
@@ -329,7 +330,7 @@ header {
     float: left;
 }
 
-#ImgDropdown{
+#ImgDropdown {
     top: 70%;
     right: 1%;
 }
@@ -352,10 +353,11 @@ header {
     grid-row: 2/3;
 }
 
-.sidebar button{
+.sidebar button {
     padding: 7.5px 20px;
     margin: 2.5% 5%;
 }
+
 .filetable {
 
     grid-column: 2/3;
@@ -389,7 +391,7 @@ header {
     width: 10%;
 }
 
-.filetable .name{
+.filetable .name {
     width: auto;
     text-align: left;
 }
@@ -472,7 +474,7 @@ header {
     color: #00bcd4;
     font-size: 18px;
     line-height: 26px;
-     font-family: 'FontAwesome';
+    font-family: 'FontAwesome';
 }
 
 .functional-buttons {
@@ -1476,24 +1478,62 @@ footer .sub-footer a {
 /**
     AboveClouds CSS Merge
 **/
+
+.login .banner {
+    padding-top: 301px;
+}
+
+.register .banner{
+    padding-top: 127px;
+}
+
 .login-img {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	overflow: hidden;
-	margin: 0 auto;
-	align-content: center;
-	justify-content: center;
-	background-color: #12c8e0;
-	border: 2px solid #12c8e0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px auto;
+    align-content: center;
+    justify-content: center;
+    background-color: #12c8e0;
+    border: 2px solid #12c8e0;
 }
+
+.login-form {
+    /**background-color: #fefefe;
+    height: 500px;
+    width: 400px;
+    padding-top:10px;*/
+/
+}
+
 .login-img img {
-	width: 100%;
+    width: 100%;
 }
-.inputButton {
+
+.inputFeld {
+    margin-top: 10px;
     height: 48px;
-    border-radius: 24px;
+    border-radius: 25px;
+    color: black;
+    background-color: #fefefe;
+    padding-left: 10px;
 }
+
 .inputButton:focus {
     padding-left: 10px;
+}
+
+.AreaSubmit .inputFeld.regButton {
+    background-color: darkblue;
+    color: white;
+    height: 35px;
+    margin-top: 10px;
+    border-color: darkblue;
+    border-radius: 25px;
+}
+
+.txt-c {
+    color: #fefefe;
+    margin-top: 5px;
 }
