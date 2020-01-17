@@ -158,7 +158,7 @@ a.gradient-button:hover {
 
 #preloader .jumper > div {
     background-color: #fff;
-    width: 10px;
+     width: 10px;
     height: 10px;
     border-radius: 100%;
     -webkit-animation-fill-mode: both;
@@ -1178,6 +1178,7 @@ footer .sub-footer a {
 /* Contact Us Page Style */
 .contact-us {
     margin-top: 140px;
+    margin-bottom: 50px;
 }
 
 .contact-us .contact-form {
@@ -1193,7 +1194,7 @@ footer .sub-footer a {
 }
 
 .contact-us .section-heading {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border-bottom: 3px solid #eee;
     padding-bottom: 40px;
 }
@@ -1265,7 +1266,8 @@ footer .sub-footer a {
 
 .contact-us .right-content ul li {
     display: block;
-    margin-bottom: 30px;
+    width: 200%;
+    margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
     color: #1e1e1e;
@@ -1274,6 +1276,7 @@ footer .sub-footer a {
 
 .contact-us .right-content ul li:last-child {
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .contact-us .right-content ul i {
@@ -1329,8 +1332,7 @@ footer .sub-footer a {
     }
 
     .contact-us .right-content ul li {
-        text-align: center;
-        width: 100%;
+        width: 200%;
     }
 
     .contact-us .right-content ul li i {

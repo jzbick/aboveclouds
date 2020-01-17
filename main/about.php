@@ -61,7 +61,7 @@
                         <a class="nav-link" href="about.php">Über uns</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.php">Services</a>
+                        <a class="nav-link" href="services.php">Dienste</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Kontakt</a>

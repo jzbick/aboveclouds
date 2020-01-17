@@ -57,13 +57,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About Us</a>
+                        <a class="nav-link" href="about.php">Über Uns</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="services.php">Our Services</a>
+                        <a class="nav-link" href="services.php">Dienste</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Kontakt</a>
                     </li>
                 </ul>
             </div>
