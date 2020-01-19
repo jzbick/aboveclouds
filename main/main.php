@@ -100,10 +100,10 @@ if (isset($_SESSION['N_ID'])) {
         </div>
         <div class=" right">
             <div class="sidebar">
-                <form enctype="multipart/form-data" method="post" action="./files/upload.php">
-                    <input type="file" name="userfile[]" multiple="multiple">
-                    <button type="submit">Hochladen</button>
+                <form id="upload_form" name="upload_form" enctype="multipart/form-data" method="post" action="./files/upload.php">
+                    <input id="userfile_upload" type="file" name="userfile[]" multiple="multiple" style="display: none;">
                 </form>
+                <button id="upload_btn" onclick="handleUpload()">Hochladen</button>
             </div>
         </div>
     </div>
@@ -186,7 +186,7 @@ if (isset($_SESSION['N_ID'])) {
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/dropdown.js"></script>
-
+    <script src="assets/js/upload_btn.js"></script>
     <script language="text/Javascript">
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
         function clearField(t) { //declaring the array outside of the
