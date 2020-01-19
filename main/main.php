@@ -92,7 +92,7 @@ if (isset($_SESSION['N_ID'])) {
                                     <div id="<?= $file['Name'] ?>" class="dropdown-content">
                                         <a href="./files/download.php?did=<?= $file['D_ID']; ?>">Download</a>
                                         <a href="./files/delete.php?did=<?= $file['D_ID']; ?>">Löschen</a>
-                                        <a href="./files/rename.php?did=<?= $file['D_ID']; ?>">Umbenennen</a>
+                                        <a onclick="location.href=this.href+prompt('Geben Sie einen neuen Dateinamen ein:');return false;" href="./files/rename.php?did=<?= $file['D_ID']; ?>&new_name=">Umbenennen</a>
                                     </div>
                             </td>
                         </tr> <?php } ?> </tbody>
