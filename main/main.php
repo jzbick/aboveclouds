@@ -1,14 +1,28 @@
 <?php
 include './config/config.php';
 
-$sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 5';
+$sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 11';
+$sql_username = 'SELECT Vorname, Nachname FROM nutzer where N_ID =:nid';
 if (isset($_SESSION['N_ID'])) {
     $nid = $_SESSION['N_ID'];
     $get_files = $dbc->prepare($sql_files);
     $get_files->bindParam(':nid', $nid);
     $get_files->execute();
     $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
+    $get_user = $dbc->prepare($sql_username);
+    $get_user->bindParam(':nid', $nid);
+    $get_user->execute();
+    $res_username = $get_user->fetchAll(0);
+    $username = $res_username[0]['Vorname'] . ' ' . $res_username[0]['Nachname'];
 }
+function prompt($prompt_msg)
+{
+    echo ("<script type='text/javascript'> var answer = prompt('" . $prompt_msg . "'); </script>");
+
+    $answer = "<script type='text/javascript'> document.write(answer); </script>";
+    return ($answer);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -50,25 +64,22 @@ if (isset($_SESSION['N_ID'])) {
     <div class="main-container">
         <!-- Header -->
         <header class="main-header">
-            <h2><a href="index.php"><span class="cloud">&#9729;</span></a></h2>
-            <img onclick="openDropdownImg()" class="profil" src="assets/images/Bender-Profil.png">
+            <div class="container">
+                <a href="index.php"><span class="cloud">&#9729;</span></a>
+                <input type="search" id="suche" placeholder="Suchen...">
+                <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
+            </div>
             <div id="ImgDropdown" class="dropdown-content">
-                <a href="Einstellung.php"><? $res['Name'] ?></a>
-                <a href="Einstellung.php">Einstellungen</a>
-                <p>------------------------------------------</p>
-                <a href="logout.php">Abmelden</a>
+                <<<<<<< Updated upstream <a href="Einstellung.php"><? $res['Name'] ?></a>
+                    =======
+                    <a href="Einstellung.php"><?= $username ?></a>
+                    <hr class="Menu-Separierer">
+                    >>>>>>> Stashed changes
+                    <a href="Einstellung.php">Einstellungen</a>
+                    <hr class="Menu-Separierer">
+                    <a href="logout.php">Abmelden</a>
             </div>
         </header>
-
-        <!-- Side Bars -->
-        <div class="left">
-            <div class="sidebar">
-                <button>Placeholder</button>
-                <button>Placeholder</button>
-                <button>Placeholder</button>
-            </div>
-        </div>
-
 
         <div class="filetable">
             <table>
@@ -97,6 +108,39 @@ if (isset($_SESSION['N_ID'])) {
                             </td>
                         </tr> <?php } ?> </tbody>
             </table>
+            <!-- Side Bars -->
+            <div class="left">
+                <div class="sidebar">
+                </div>
+            </div>
+
+
+            <<<<<<< Updated upstream <div class="filetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="name" colspan="2">Name</th>
+                            <th class="datum" colspan="2">Bearbeitet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($res as $file) { ?>
+                            <tr>
+                                <td class="icon">Icon</td>
+                                <td class="name"><?= $file['Name']; ?></td>
+                                <td class="datum"><?= ($file['BDatum'] != NULL ? $file['BDatum'] : $file['ADatum']); ?></td>
+                                <td class="button">
+                                    <div class="dropdown">
+                                        <button onclick="openDropdown('<?= $file['Name'] ?>')" class="drop" id="btn">...</button>
+                                        <div id="<?= $file['Name'] ?>" class="dropdown-content">
+                                            <a href="./files/download.php?did=<?= $file['D_ID']; ?>">Download</a>
+                                            <a href="./files/delete.php?did=<?= $file['D_ID']; ?>">Delete</a>
+                                        </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
         </div>
         <div class=" right">
             <div class="sidebar">
@@ -106,7 +150,17 @@ if (isset($_SESSION['N_ID'])) {
                 </form>
             </div>
         </div>
-    </div>
+        =======
+
+        <div class="right">
+            <div class="sidebar">
+                <form enctype="multipart/form-data" method="post" action="./files/upload.php">
+                    <input type="file" name="userfile[]" multiple="multiple">
+                    <button type="submit" id="uploadbtn"><span id="upload">&#8625;</span>Hochladen</button>
+                </form>
+                >>>>>>> Stashed changes
+            </div>
+        </div>
     </div>
 
     <div class="main-footer">
@@ -174,29 +228,56 @@ if (isset($_SESSION['N_ID'])) {
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            <<<<<<< Updated upstream </footer> </div> <!-- Bootstrap core JavaScript -->
+                <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <!-- Additional Scripts -->
+                <script src="assets/js/custom.js"></script>
+                <script src="assets/js/owl.js"></script>
+                <script src="assets/js/accordions.js"></script>
+                <script src="assets/js/dropdown.js"></script>
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/dropdown.js"></script>
+                <script language="text/Javascript">
+                    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+                    function clearField(t) { //declaring the array outside of the
+                        if (!cleared[t.id]) { // function makes it static and global
+                            cleared[t.id] = 1; // you could use true and false, but that's more typing
+                            t.value = ''; // with more chance of typos
+                            t.style.color = '#fff';
+                        } ===
+                        === = <
+                        /div> <
+                        /footer> <
+                        /div>
 
-    <script language="text/Javascript">
-        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-        function clearField(t) { //declaring the array outside of the
-            if (!cleared[t.id]) { // function makes it static and global
-                cleared[t.id] = 1; // you could use true and false, but that's more typing
-                t.value = ''; // with more chance of typos
-                t.style.color = '#fff';
-            }
-        }
-    </script>
+                        <
+                        !--Bootstrap core JavaScript-- >
+                        <
+                        script
+                        src = "vendor/jquery/jquery.min.js" >
+                </script>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Additional Scripts -->
+                <script src="assets/js/custom.js"></script>
+                <script src="assets/js/owl.js"></script>
+                <script src="assets/js/accordions.js"></script>
+                <script src="assets/js/dropdown.js"></script>
+
+
+                <script language="text/Javascript">
+                    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+                    function clearField(t) { //declaring the array outside of the
+                        if (!cleared[t.id]) { // function makes it static and global
+                            cleared[t.id] = 1; // you could use true and false, but that's more typing
+                            t.value = ''; // with more chance of typos
+                            t.style.color = '#fff'; >>>
+                            >>> >
+                            Stashed
+                            changes
+                        }
+                </script>
 
 </body>
 
