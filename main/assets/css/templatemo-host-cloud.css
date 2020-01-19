@@ -296,7 +296,7 @@ header {
     grid-template-rows: 0.5fr 3fr;
 }
 
-.main-header .container {
+.main-header .flex-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -349,13 +349,18 @@ header {
     border-bottom: 1px solid #e6eBeb;
 }
 
-.cloud {
+.main-header .cloud {
     position: absolute;
     color: darkblue;
     float: left;
     left: 2.5%;
     top: -15%;
     font-size: 110px;
+}
+
+.cloud{
+    color: white;
+    float: left;
 }
 
 .background-header .cloud {
