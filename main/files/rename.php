@@ -5,8 +5,7 @@ include './getName.php';
 
 $file_path = getPath($_GET['did'], $dbc);
 $file_name = getName($_GET['did'], $dbc);
-$new_name = $_GET['new_name'];
-if (file_exists($file_path)) {
+if (strlen($new_name) > 0) {
     $new_path =  str_replace($file_name, $new_name, $file_path);
     rename($file_path, $new_path) or die('File could not be renamed.');
     include './renameFile.php';

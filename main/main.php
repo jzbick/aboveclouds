@@ -9,13 +9,6 @@ if (isset($_SESSION['N_ID'])) {
     $get_files->execute();
     $res = $get_files->fetchAll(PDO::FETCH_ASSOC);
 }
-function prompt($prompt_msg)
-{
-    echo ("<script type='text/javascript'> var answer = prompt('" . $prompt_msg . "'); </script>");
-
-    $answer = "<script type='text/javascript'> document.write(answer); </script>";
-    return ($answer);
-}
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +92,8 @@ function prompt($prompt_msg)
                                     <div id="<?= $file['Name'] ?>" class="dropdown-content">
                                         <a href="./files/download.php?did=<?= $file['D_ID']; ?>">Download</a>
                                         <a href="./files/delete.php?did=<?= $file['D_ID']; ?>">Löschen</a>
-                                        <a href="./files/rename.php?did=<?= $file['D_ID']; ?>&new_name=marvin">Umbenennen</a> </div>
+                                        <a href="./files/rename.php?did=<?= $file['D_ID']; ?>">Umbenennen</a>
+                                    </div>
                             </td>
                         </tr> <?php } ?> </tbody>
             </table>
