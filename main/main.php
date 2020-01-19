@@ -42,168 +42,166 @@ if (isset($_SESSION['N_ID'])) {
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
-
-<!-- Grid -->
-<div class="main-container">
-    <!-- Header -->
-    <header class="main-header">
-    <div class="container">
-        <a href="index.php"><span class="cloud">&#9729;</span></a>
-        <input type="search" id="suche" placeholder="Suchen...">
-        <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
-    </div>
-    <div id="ImgDropdown" class="dropdown-content">
-        <a href="Einstellung.php"><?= $username ?></a>
-        <hr class="Menu-Separierer">
-        <a href="Einstellung.php">Einstellungen</a>
-        <hr class="Menu-Separierer">
-        <a href="logout.php">Abmelden</a>
-    </div>
-    </header>
-
-    <!-- Side Bars -->
-    <div class="left">
-        <div class="sidebar">
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Grid -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="container">
+                <a href="index.php"><span class="cloud">&#9729;</span></a>
+                <input type="search" id="suche" placeholder="Suchen...">
+                <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
+            </div>
+            <div id="ImgDropdown" class="dropdown-content">
+                <a href="Einstellung.php"><?= $username ?></a>
+                <hr class="Menu-Separierer">
+                <a href="Einstellung.php">Einstellungen</a>
+                <hr class="Menu-Separierer">
+                <a href="logout.php">Abmelden</a>
+            </div>
+        </header>
+
+        <!-- Side Bars -->
+        <div class="left">
+            <div class="sidebar">
+            </div>
+        </div>
 
 
-    <div class="filetable">
-        <table>
-            <thead>
-            <tr>
-                <th class="name" colspan="2">Name</th>
-                <th class="datum" colspan="2">Bearbeitet</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($res as $file) { ?>
-                <tr>
-                    <td class="icon">Icon</td>
-                    <td class="name"><?= $file['Name']; ?></td>
-                    <td class="datum"><?= ($file['BDatum'] != NULL ? $file['BDatum'] : $file['ADatum']); ?></td>
-                    <td class="button">
-                        <div class="dropdown">
-                            <button onclick="openDropdown('<?= $file['Name'] ?>')" class="drop" id="btn">...</button>
-                            <div id="<?= $file['Name'] ?>" class="dropdown-content">
-                                <a href="./files/download.php?did=<?= $file['D_ID']; ?>">Herunterladen</a>
-                                <a href="./files/delete.php?did=<?= $file['D_ID']; ?>">Löschen</a>
-                                <a onclick="location.href=this.href+prompt('Geben Sie einen neuen Dateinamen ein:');return false;"
-                                   href="./files/rename.php?did=<?= $file['D_ID']; ?>&new_name=">Umbenennen</a>
+        <div class="filetable">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="name" colspan="2">Name</th>
+                        <th class="datum" colspan="2">Bearbeitet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($res as $file) { ?>
+                        <tr>
+                            <td class="icon">Icon</td>
+                            <td class="name"><?= $file['Name']; ?></td>
+                            <td class="datum"><?= ($file['BDatum'] != NULL ? $file['BDatum'] : $file['ADatum']); ?></td>
+                            <td class="button">
+                                <div class="dropdown">
+                                    <button onclick="openDropdown('<?= $file['Name'] ?>')" class="drop" id="btn">...</button>
+                                    <div id="<?= $file['Name'] ?>" class="dropdown-content">
+                                        <a href="./files/download.php?did=<?= $file['D_ID']; ?>">Herunterladen</a>
+                                        <a href="./files/delete.php?did=<?= $file['D_ID']; ?>">Löschen</a>
+                                        <a onclick="location.href=this.href+prompt('Geben Sie einen neuen Dateinamen ein:');return false;" href="./files/rename.php?did=<?= $file['D_ID']; ?>&new_name=">Umbenennen</a>
+                                    </div>
+                            </td>
+                        </tr> <?php } ?> </tbody>
+            </table>
+        </div>
+        <div class=" right">
+            <div class="sidebar">
+                <form id="upload_form" name="upload_form" enctype="multipart/form-data" method="post" action="./files/upload.php">
+                    <input id="userfile_upload" type="file" name="userfile[]" multiple="multiple" style="display: none;" onchange="this.form.submit();">
+                </form>
+                <button id="uploadbtn" onclick="handleUpload()"><span id="upload">&#8625;</span>Hochladen</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="main-footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="footer-heading">
+                                <h2>Über uns</h2>
                             </div>
-                    </td>
-                </tr> <?php } ?> </tbody>
-        </table>
-    </div>
-    <div class=" right">
-        <div class="sidebar">
-            <form id="upload_form" name="upload_form" enctype="multipart/form-data" method="post"
-                  action="./files/upload.php">
-                <input id="userfile_upload" type="file" name="userfile[]" multiple="multiple" style="display: none; onchange="this.form.submit();">
-            </form>
-            <button id="uploadbtn" onclick="handleUpload()"><span id="upload">&#8625;</span>Hochladen</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="main-footer">
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-item">
-                        <div class="footer-heading">
-                            <h2>Über uns</h2>
+                            <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere
+                                Studenten
+                                weltweit richten soll!</p>
                         </div>
-                        <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere
-                            Studenten
-                            weltweit richten soll!</p>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-item">
-                        <div class="footer-heading">
-                            <h2></h2>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="footer-heading">
+                                <h2></h2>
+                            </div>
+                            <ul class="footer-list">
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
                         </div>
-                        <ul class="footer-list">
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
                     </div>
-                </div>
 
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-item">
-                        <div class="footer-heading">
-                            <h2></h2>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="footer-heading">
+                                <h2></h2>
+                            </div>
+                            <ul class="footer-list">
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
                         </div>
-                        <ul class="footer-list">
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-item">
-                        <div class="footer-heading">
-                            <h2>Mehr Informationen</h2>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="footer-heading">
+                                <h2>Mehr Informationen</h2>
+                            </div>
+                            <ul class="footer-list">
+                                <li>Email: <a href="#">kontakt@aboveclouds.online</a></li>
+                                <li>Support: <a href="#">support@aboveclouds.online</a></li>
+                                <li>Website: <a href="#">www.AboveClouds.online</a></li>
+                            </ul>
                         </div>
-                        <ul class="footer-list">
-                            <li>Email: <a href="#">kontakt@aboveclouds.online</a></li>
-                            <li>Support: <a href="#">support@aboveclouds.online</a></li>
-                            <li>Website: <a href="#">www.AboveClouds.online</a></li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="sub-footer">
-                        <p>Copyright &copy; 2019 AboveClouds Company</p>
+                    <div class="col-md-12">
+                        <div class="sub-footer">
+                            <p>Copyright &copy; 2019 AboveClouds Company</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Additional Scripts -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/owl.js"></script>
-<script src="assets/js/accordions.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/upload_btn.js"></script>
-<script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) { //declaring the array outside of the
-        if (!cleared[t.id]) { // function makes it static and global
-            cleared[t.id] = 1; // you could use true and false, but that's more typing
-            t.value = ''; // with more chance of typos
-            t.style.color = '#fff';
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/upload_btn.js"></script>
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) { //declaring the array outside of the
+            if (!cleared[t.id]) { // function makes it static and global
+                cleared[t.id] = 1; // you could use true and false, but that's more typing
+                t.value = ''; // with more chance of typos
+                t.style.color = '#fff';
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 
