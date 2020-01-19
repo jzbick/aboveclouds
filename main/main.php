@@ -108,7 +108,7 @@ if (isset($_SESSION['N_ID'])) {
         <div class="sidebar">
             <form id="upload_form" name="upload_form" enctype="multipart/form-data" method="post"
                   action="./files/upload.php">
-                <input id="userfile_upload" type="file" name="userfile[]" multiple="multiple" style="display: none;">
+                <input id="userfile_upload" type="file" name="userfile[]" multiple="multiple" style="display: none; onchange="this.form.submit();">
             </form>
             <button id="uploadbtn" onclick="handleUpload()"><span id="upload">&#8625;</span>Hochladen</button>
         </div>
