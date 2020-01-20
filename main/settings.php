@@ -100,7 +100,7 @@ if (isset($_SESSION['N_ID'])) {
             <h1 class="heading">Passwort</h1>
             <label class="user-value">*************</label>
             <label class="open-btn" onclick="openForm('pw-form')" id="pw-edit-btn">Bearbeiten</label>
-            <form class="edit-form hide-form" id="pw-form" method="GET" action="./user/editPassword.php">
+            <form class="edit-form hide-form" id="pw-form" method="POST" action="./user/editPassword.php">
                 <h2>Passwort</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
