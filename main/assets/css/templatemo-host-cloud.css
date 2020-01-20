@@ -291,9 +291,8 @@ header {
 
 .main-container {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.5fr 3fr;
+    grid-template-rows: 0.31fr 3fr;
 }
 
 .main-header .flex-container {
@@ -375,6 +374,7 @@ header {
 
 .sidebar {
     display: flex;
+    position: absolute;
     height: 100%;
     background-color: #F7F9FA;
     text-align: center;

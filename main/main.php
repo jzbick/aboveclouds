@@ -1,7 +1,7 @@
 <?php
 include './config/config.php';
 
-$sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid LIMIT 11';
+$sql_files = 'SELECT * FROM Datei WHERE N_ID = :nid';
 $sql_username = 'SELECT Vorname, Nachname FROM nutzer where N_ID =:nid';
 if (isset($_SESSION['N_ID'])) {
     $nid = $_SESSION['N_ID'];
@@ -62,9 +62,9 @@ if (isset($_SESSION['N_ID'])) {
                 <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
             </div>
             <div id="ImgDropdown" class="dropdown-content">
-                <a href="Einstellung.php"><?= $username ?></a>
+                <a href="settings.php"><?= $username ?></a>
                 <hr class="Menu-Separierer">
-                <a href="Einstellung.php">Einstellungen</a>
+                <a href="settings.php">Einstellungen</a>
                 <hr class="Menu-Separierer">
                 <a href="logout.php">Abmelden</a>
             </div>
