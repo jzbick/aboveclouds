@@ -60,7 +60,7 @@ if (isset($_SESSION['N_ID'])) {
             <h1 class="heading">Nutzername</h1>
             <label class="user-value"><?= $res_username[0]['Vorname'] ?> <?= $res_username[0]['Nachname'] ?></label>
             <label class="open-btn" onclick="openForm('username-form')" id="username-edit-btn">Bearbeiten</label>
-            <form class="edit-form hide-form" id="username-form" method="put" action="./user/editUsername.php">
+            <form class="edit-form hide-form" id="username-form" method="GET" action="./user/editUsername.php">
                 <h2>Nutzername</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
@@ -82,7 +82,7 @@ if (isset($_SESSION['N_ID'])) {
             <h1 class="heading">Email-Adresse</h1>
             <label class="user-value"><?= $res_username[0]['Email'] ?></label>
             <label class="open-btn" onclick="openForm('email-form')" id="email-edit-btn">Bearbeiten</label>
-            <form class="edit-form hide-form" id="email-form" method="put" action="./user/editEmail.php">
+            <form class="edit-form hide-form" id="email-form" method="GET" action="./user/editEmail.php">
                 <h2>Email-Adresse</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
@@ -100,7 +100,7 @@ if (isset($_SESSION['N_ID'])) {
             <h1 class="heading">Passwort</h1>
             <label class="user-value">*************</label>
             <label class="open-btn" onclick="openForm('pw-form')" id="pw-edit-btn">Bearbeiten</label>
-            <form class="edit-form hide-form" id="pw-form" method="put" action="./user/editPassword.php">
+            <form class="edit-form hide-form" id="pw-form" method="GET" action="./user/editPassword.php">
                 <h2>Passwort</h2>
                 <div class="input-wrapper">
                     <div class="inputField">

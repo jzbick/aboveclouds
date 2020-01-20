@@ -1,10 +1,10 @@
 <?php
 include_once '../config/config.php';
 
-$sql = "update nutzer set vorname=:vorname, nachname=:nachname where n_id=:nid";
+$sql = "UPDATE Nutzer SET Vorname=:vorname, Nachname=:nachname WHERE N_ID=:nid";
 
-$new_vorname = $_PUT['new_vorname'];
-$new_nachname = $_PUT['new_nachname'];
+$new_vorname = $_GET['new_vorname'];
+$new_nachname = $_GET['new_nachname'];
 if (isset($new_vorname, $new_nachname, $_SESSION['N_ID'])) {
     $edit_username = $dbc->prepare($sql);
     $edit_username->bindParam(':vorname', $new_vorname);
