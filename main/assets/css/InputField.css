@@ -1,0 +1,55 @@
+.inputField-input{
+    font-size: 1em;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .25em;
+    background-clip: padding-box;
+    outline: none;
+}
+
+.inputField-input::placeholder{
+    opacity: 0;
+}
+
+.inputField-input:not(:placeholder-shown){
+    padding-top: 1.25em;
+    padding-bottom: .25em;
+}
+
+.inputField-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: gray;
+    cursor: text;
+    border: 1px solid transparent;
+    border-radius: .25em;
+    transition: all .1s ease-in-out;
+    pointer-events: none;
+}
+
+.inputField-input:not(:placeholder-shown) ~ label{
+    padding-top: .25em;
+    padding-bottom: .25em;
+    font-size: .75em;
+}
+
+.inputField-label, .inputField-input{
+    padding: .75em;  
+}
+
+.inputField{
+    font-size: 1em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.rmvBtn{
+    position: absolute;
+    width: 1.5rem !important;
+    top: .75rem;
+    right: 1rem;
+}
