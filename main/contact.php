@@ -134,11 +134,14 @@
                                 <fieldset>
                                     <button type="submit" id="form-submit" class="main-button">Senden</button>
                                     <?php
-                                    mail(
-                                        "kontakt@aboveclouds.online",
-                                        "$_POST[subject]",
-                                        "$_POST[message]",
-                                        "From: Absender <$_POST[email]>"); ?>
+                                    if ( isset($_POST['subject']) and isset($_POST['message']) and isset($_POST['email']) ) { 
+                                        mail(
+                                            "kontakt@aboveclouds.online",
+                                            "$_POST[subject]",
+                                            "$_POST[message]",
+                                            "From: Absender <$_POST[email]>"); 
+                                    }
+                                    ?>
                                 </fieldset>
                             </div>
                         </div>
