@@ -56,59 +56,65 @@ if (isset($_SESSION['N_ID'])) {
         </div>
     </header>
     <div class="flex-container" id="top-bottom">
-        <div class="flex-container" id="name">
-            <label>Nutzername</label>
+        <div class="flex-container settings-container" id="name">
+            <h1 class="heading">Nutzername</h1>
+            <label class="user-value"><?= $res_username[0]['Vorname'] ?> <?= $res_username[0]['Nachname'] ?></label>
+            <label class="open-btn" onclick="openForm('username-form')" id="username-edit-btn">Bearbeiten</label>
             <form class="edit-form hide-form" id="username-form" method="put" action="./user/editUsername.php">
                 <h2>Nutzername</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
-                        <input type="text" class="inputField-input" id="vorname-input-field" name="vorname-input" placeholder="Vorname" value="<?= $res_username[0]['Vorname'] ?>" />
+                        <input type="text" class="inputField-input" id="vorname-input-field" name="new_vorname" placeholder="Vorname" value="<?= $res_username[0]['Vorname'] ?>" />
                         <label class="inputField-label">Vorname:</label>
                     </div>
                     <div class="inputField">
-                        <input type="text" class="inputField-input" id="nachname-input-field" name="nachname-input" placeholder="Nachname" value="<?= $res_username[0]['Nachname'] ?>" />
+                        <input type="text" class="inputField-input" id="nachname-input-field" name="new_nachname" placeholder="Nachname" value="<?= $res_username[0]['Nachname'] ?>" />
                         <label class="inputField-label">Nachname:</label>
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <button class="edit-form-btn">Zurück</button>
-                    <button class="edit-form-btn">Speichern</button>
+                    <span onclick="closeForm('username-form')" id="username-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="submitForm('username-form')" class="edit-form-btn">Speichern</span>
                 </div>
             </form>
         </div>
-        <div class="flex-container" id="email">
-            <label>Email-Adresse</label>
-            <form class="edit-form hide-form" id="username-form" method="put" action="./user/editUsername.php">
+        <div class="flex-container settings-container" id="email">
+            <h1 class="heading">Email-Adresse</h1>
+            <label class="user-value"><?= $res_username[0]['Email'] ?></label>
+            <label class="open-btn" onclick="openForm('email-form')" id="email-edit-btn">Bearbeiten</label>
+            <form class="edit-form hide-form" id="email-form" method="put" action="./user/editEmail.php">
                 <h2>Email-Adresse</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
-                        <input type="email" class="inputField-input" id="email-input-field" name="email-input" placeholder="Email-Adresse" value="<?= $res_username[0]['Email'] ?>" />
+                        <input type="email" class="inputField-input" id="email-input-field" name="new_email" placeholder="Email-Adresse" value="<?= $res_username[0]['Email'] ?>" />
                         <label class="inputField-label">Email-Adresse:</label>
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <button class="edit-form-btn">Zurück</button>
-                    <button class="edit-form-btn">Speichern</button>
+                    <span onclick="closeForm('email-form')" id="email-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="submitForm('email-form')" class="edit-form-btn">Speichern</span>
                 </div>
             </form>
         </div>
-        <div class="flex-container" id="password">
-            <label>Passwort</label>
-            <form class="edit-form hide-form" id="username-form" method="put" action="./user/editUsername.php">
+        <div class="flex-container settings-container" id="password">
+            <h1 class="heading">Passwort</h1>
+            <label class="user-value">*************</label>
+            <label class="open-btn" onclick="openForm('pw-form')" id="pw-edit-btn">Bearbeiten</label>
+            <form class="edit-form hide-form" id="pw-form" method="put" action="./user/editUsername.php">
                 <h2>Passwort</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
-                        <input type="password" class="inputField-input" id="pw-input-field" name="pw-input" placeholder="Password" value="" />
+                        <input type="password" class="inputField-input" id="pw-input-field" name="new_pw" placeholder="Password" value="" />
                         <label class="inputField-label">Neues Passwort:</label>
                     </div>
                     <div class="inputField">
-                        <input type="text" class="inputField-input" id="pw-repeat-input-field" name="pw-repeat-input" placeholder="Nachname" value="" />
+                        <input type="text" class="inputField-input" id="pw-repeat-input-field" name="new_pw_repeat" placeholder="Nachname" value="" />
                         <label class="inputField-label">Passwort wiederholen:</label>
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <button class="edit-form-btn">Zurück</button>
-                    <button class="edit-form-btn">Speichern</button>
+                    <span onclick="closeForm('pw-form')" id="pw-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="submitForm('pw-form')" class="edit-form-btn">Speichern</span>
                 </div>
             </form>
         </div>
@@ -123,6 +129,7 @@ if (isset($_SESSION['N_ID'])) {
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/upload_btn.js"></script>
+    <script src="assets/js/handle.js"></script>
     <script language="text/Javascript">
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
         function clearField(t) { //declaring the array outside of the
