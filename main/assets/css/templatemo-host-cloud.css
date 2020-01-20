@@ -295,13 +295,31 @@ header {
     grid-template-rows: 0.31fr 3fr;
 }
 
-.main-header .flex-container {
+.flex-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100%;
+}
+
+.flex-container#left-right {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-container#top-bottom {
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 7%;
+}
+
+.flex-container label{
+    padding-left: 0.5%;
+}
+
+#name, #email, #password{
+    border-bottom: 2px solid gray;
+    margin-top: 6%;
 }
 
 .main-header {
@@ -357,7 +375,7 @@ header {
     font-size: 110px;
 }
 
-.cloud{
+.cloud {
     color: white;
     float: left;
 }
@@ -375,11 +393,12 @@ header {
 .sidebar {
     display: flex;
     position: absolute;
-    height: 100%;
+    height: 137.75%;
+    width: 20%;
+    border-bottom: 2px solid gray;
     background-color: #F7F9FA;
-    text-align: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .left {

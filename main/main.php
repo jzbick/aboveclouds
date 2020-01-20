@@ -56,7 +56,7 @@ if (isset($_SESSION['N_ID'])) {
     <div class="main-container">
         <!-- Header -->
         <header class="main-header">
-            <div class="flex-container">
+            <div class="flex-container" id="left-right">
                 <a href="index.php"><span class="cloud">&#9729;</span></a>
                 <input type="search" id="suche" placeholder="Suchen...">
                 <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">

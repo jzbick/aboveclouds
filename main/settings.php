@@ -21,7 +21,7 @@ if (isset($_SESSION['N_ID'])) {
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
-    <title>AboveClouds - Name</title>
+    <title>AboveClouds - Einstellungen</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -40,9 +40,8 @@ if (isset($_SESSION['N_ID'])) {
         <div></div>
     </div>
 </div>
-<div class="flex-container" id="top-bottom">
     <header class="main-header">
-        <div class="flex-container">
+        <div class="flex-container" id="left-right">
             <a href="index.php"><span class="cloud">&#9729;</span></a>
             <input type="search" id="suche" placeholder="Suchen...">
             <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
@@ -50,11 +49,10 @@ if (isset($_SESSION['N_ID'])) {
         <div id="ImgDropdown" class="dropdown-content">
             <a href="settings.php"><?= $username ?></a>
             <hr class="Menu-Separierer">
-            <a href="settings.php">Einstellungen</a>
-            <hr class="Menu-Separierer">
             <a href="logout.php">Abmelden</a>
         </div>
     </header>
+<div class="flex-container" id="top-bottom">
     <div class="flex-container" id="name">
         <label>Nutzername</label>
     </div>
