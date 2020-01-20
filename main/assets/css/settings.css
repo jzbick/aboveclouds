@@ -19,8 +19,7 @@
 }
 .edit-form-btn-wrapper{
     width: 30vw;
-    display: flex;
-    justify-content: space-evenly;
+    display: flex;  
 }
 
 .hide-form{
@@ -28,7 +27,8 @@
 }
 
 .heading{
-    margin-top: 3rem;
+    margin-top: 2rem;
+    font-size: 1.75rem;
 }
 
 .open-btn{
@@ -36,4 +36,10 @@
     cursor: pointer;
     margin-top: 9rem;
     margin-right: 2rem;
+}
+
+.user-value{
+    margin-top: 4rem;
+    font-size: 1.1rem;
+    width: 10rem;
 }

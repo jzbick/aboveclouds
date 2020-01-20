@@ -13,4 +13,4 @@ if (isset($new_vorname, $new_nachname, $_SESSION['N_ID'])) {
     $edit_username->execute();
 }
 
-header('Location: ../main.php');
+header('Location: ../settings.php');

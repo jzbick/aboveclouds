@@ -11,4 +11,4 @@ if (isset($new_email, $_SESSION['N_ID'])) {
     $edit_email->execute();
 }
 
-header('Location: ../main.php');
+header('Location: ../settings.php');
