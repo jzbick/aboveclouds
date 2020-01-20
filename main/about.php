@@ -112,7 +112,7 @@
                 <div class="right-content">
                     <div class="section-heading">
                         <span>Über Uns</span>
-                        <h2>Hintergrund unserer Firma</h2>
+                        <h2>Im Hintergrund sieht man unsere Firma</h2>
                         <p>AboveClouds ist eine von Studenten selber erstellte Cloudlösung, welche sich an andere
                             Studenten weltweit richten soll!</p>
                     </div>
