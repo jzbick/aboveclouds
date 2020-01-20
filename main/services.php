@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>AboveClouds - Services</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <title>AboveClouds - Dienste</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><h2>Host <em>Cloud</em></h2></a>
+            <a class="navbar-brand" href="index.php"><h2>&#9729;<em>AboveClouds</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -89,8 +89,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Our Services</h1>
-                <p><a href="index.php">Home</a> / <span>Unsere Services</span></p>
+                <h1>Unsere Dienste</h1>
+                <p><a href="index.php">Home</a> / <span>Dienste</span></p>
             </div>
         </div>
     </div>
