@@ -50,7 +50,7 @@ if (isset($_SESSION['N_ID'])) {
             <img onclick="openDropdownImg()" class="drop" id="img" src="assets/images/Bender-Profil.png">
         </div>
         <div id="ImgDropdown" class="dropdown-content">
-            <a href="settings.php"><?= $username ?></a>
+            <a href="settings.php"><?= $res_username[0]['Vorname'] ?> <?= $res_username[0]['Nachname'] ?></a>
             <hr class="Menu-Separierer">
             <a href="logout.php">Abmelden</a>
         </div>
@@ -100,7 +100,7 @@ if (isset($_SESSION['N_ID'])) {
             <h1 class="heading">Passwort</h1>
             <label class="user-value">*************</label>
             <label class="open-btn" onclick="openForm('pw-form')" id="pw-edit-btn">Bearbeiten</label>
-            <form class="edit-form hide-form" id="pw-form" method="put" action="./user/editUsername.php">
+            <form class="edit-form hide-form" id="pw-form" method="put" action="./user/editPassword.php">
                 <h2>Passwort</h2>
                 <div class="input-wrapper">
                     <div class="inputField">
@@ -108,7 +108,7 @@ if (isset($_SESSION['N_ID'])) {
                         <label class="inputField-label">Neues Passwort:</label>
                     </div>
                     <div class="inputField">
-                        <input type="text" class="inputField-input" id="pw-repeat-input-field" name="new_pw_repeat" placeholder="Nachname" value="" />
+                        <input type="password" class="inputField-input" id="pw-repeat-input-field" name="new_pw_repeat" placeholder="Nachname" value="" />
                         <label class="inputField-label">Passwort wiederholen:</label>
                     </div>
                 </div>
