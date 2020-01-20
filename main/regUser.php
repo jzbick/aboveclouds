@@ -1,14 +1,8 @@
 <?php
 include_once __DIR__ . '/config/config.php';
 
-$TitelDerSeite = "Bei AboveClouds registrieren";
 $reg_complete = 1;
 
-include __DIR__ . '/templates/html_Header.php';
-
-?>
-
-<?php
 //Check_Input Script:
 
 //Vorname
@@ -101,8 +95,8 @@ if ($reg_complete == 1) {
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>&#9729;AboveClouds - Startseite</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <title>Bei AboveClouds registrieren</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>Host Cloud Template - About Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <title>AboveClouds - Über Uns</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="about.php">Über uns</a>
+                        <a class="nav-link" href="about.php">Über Uns</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.php">Dienste</a>
@@ -90,7 +90,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Über Uns</h1>
+                <h1>Über AboveClouds</h1>
                 <p><a href="index.php">Home</a> / <span>Über Uns</span></p>
             </div>
         </div>

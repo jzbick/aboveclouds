@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
     <title>AboveClouds - Kontakt</title>
 
     <!-- Bootstrap core CSS -->
@@ -92,8 +92,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Us</h1>
-                <p><a href="index.php">Home</a> / <span>Contact Us</span></p>
+                <h1>Kontaktier Uns</h1>
+                <p><a href="index.php">Home</a> / <span>Kontakt</span></p>
             </div>
         </div>
     </div>

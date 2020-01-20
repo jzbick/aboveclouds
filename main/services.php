@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>AboveClouds - Services</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <title>AboveClouds - Dienste</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><h2>Host <em>Cloud</em></h2></a>
+            <a class="navbar-brand" href="index.php"><h2>&#9729;<em>AboveClouds</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -89,8 +89,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Our Services</h1>
-                <p><a href="index.php">Home</a> / <span>Unsere Services</span></p>
+                <h1>Unsere Dienste</h1>
+                <p><a href="index.php">Home</a> / <span>Dienste</span></p>
             </div>
         </div>
     </div>
@@ -104,8 +104,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <span>Hosting Services</span>
-                    <h2>Der beste Service, den wir Ihnen bieten können</h2>
+                    <span>Hosting Dienste</span>
+                    <h2>Die besten Dienste, die wir Ihnen bieten können</h2>
                     <p>Für alle interessierten Besucher unserer Seite hier noch einmal der ganze Umfang des kompletten 
                         AboveCloud Erlebnisses nur für Sie zusammengefasst:</p>
                 </div>
@@ -113,7 +113,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa useradd"></i>
-                    <h4>Registrierung |F1|</h4>
+                    <h4>Registrierung</h4>
                     <p>Sie können sich nun auf unserer Seite registrieren, um schnell den kompletten Umfang des AboveClouds 
                         Erlebnisses genießen zu können.<br><br></p>
                 </div>
@@ -121,7 +121,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa userlogin"></i>
-                    <h4>Login |F2|</h4>
+                    <h4>Anmelden</h4>
                     <p>Melden Sie sich an, um ihre Dateien in unserer extra für Sie entworfenen Cloud speichern und von 
                         woanders wieder abrufen zu können.<br><br></p>
                 </div>
@@ -129,7 +129,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa userlogout"></i>
-                    <h4>Logout |F3|</h4>
+                    <h4>Abmelden</h4>
                     <p>Sie sind müde immerzu in unserer genialen Cloud angemeldet zu sein?<br>
                         Mithilfe unserer Abmeldenfunktion muss das nicht sein! Gönnen Sie sich zwischendurch mal etwas Ruhe.</p>
                 </div>
@@ -137,21 +137,21 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa dataadd"></i>
-                    <h4>Datei hochladen |F4|</h4>
+                    <h4>Datei hochladen</h4>
                     <p>Haben Sie schon probiert etwas in unserer Cloud zu speichern? Wenn nicht, wäre jetzt der geeignete Zeitpunkt dafür.<br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa fa-save"></i>
-                    <h4>Datei herunterladen |F5|</h4>
+                    <h4>Datei herunterladen</h4>
                     <p>Natürlich können Sie die hochgeladenen Dateien auch wieder herunterladen!<br><br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa fa-eraser"></i>
-                    <h4>Datei löschen |F6|</h4>
+                    <h4>Datei löschen</h4>
                     <p>Sie haben einen Fehler gemacht, oder die Gästeliste von 1918 ist zu alt geworden, um sie weiter aufzubewahren?
                         Löschen können Sie bei uns natürlich auch!
                     </p>
