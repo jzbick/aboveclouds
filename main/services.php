@@ -10,7 +10,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Host Cloud Template - Services</title>
+    <title>AboveClouds - Services</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -105,58 +105,56 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <span>Hosting Services</span>
-                    <h2>Best Services We Provide</h2>
-                    <p>Aenean molestie, odio quis viverra ultricies, leo tellus lacinia neque, sit amet maximus tortor
-                        nunc aliquet felis. Duis sit amet nibh non sapien tincidunt bibendum. Curabitur rutrum justo id
-                        leo ornare, suscipit lobortis augue volutpat.</p>
+                    <h2>Der beste Service, den wir Ihnen bieten können</h2>
+                    <p>Für alle interessierten Besucher unserer Seite hier noch einmal der ganze Umfang des kompletten 
+                        AboveCloud Erlebnisses nur für Sie zusammengefasst:</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
-                    <i class="fa fa-cloud"></i>
-                    <h4>VPS Cloud</h4>
-                    <p>Fusce blandit commodo metus eu suscipit. Nullam ut blandit neque. Aenean nec tellus ac velit
-                        elementum tempor. Pellentesque nec urna ipsum.</p>
+                    <i class="fa useradd"></i>
+                    <h4>Registrierung |F1|</h4>
+                    <p>Sie können sich nun auf unserer Seite registrieren, um schnell den kompletten Umfang des AboveClouds 
+                        Erlebnisses genießen zu können.<br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
-                    <i class="fa fa-server"></i>
-                    <h4>Fast Network</h4>
-                    <p>Sed ligula arcu, interdum eu magna eget, tristique aliquet nibh. Aenean sodales justo vitae ex
-                        pharetra, vitae tincidunt dolor condimentum.</p>
+                    <i class="fa userlogin"></i>
+                    <h4>Login |F2|</h4>
+                    <p>Melden Sie sich an, um ihre Dateien in unserer extra für Sie entworfenen Cloud speichern und von 
+                        woanders wieder abrufen zu können.<br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
-                    <i class="fa fa-database"></i>
-                    <h4>Reliable Platform</h4>
-                    <p>Fusce blandit commodo metus eu suscipit. Nullam ut blandit neque. Aenean nec tellus ac velit
-                        elementum tempor. Pellentesque nec urna ipsum.</p>
+                    <i class="fa userlogout"></i>
+                    <h4>Logout |F3|</h4>
+                    <p>Sie sind müde immerzu in unserer genialen Cloud angemeldet zu sein?<br>
+                        Mithilfe unserer Abmeldenfunktion muss das nicht sein! Gönnen Sie sich zwischendurch mal etwas Ruhe.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <i class="fa dataadd"></i>
+                    <h4>Datei hochladen |F4|</h4>
+                    <p>Haben Sie schon probiert etwas in unserer Cloud zu speichern? Wenn nicht, wäre jetzt der geeignete Zeitpunkt dafür.<br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <i class="fa fa-save"></i>
-                    <h4>Managed CDN</h4>
-                    <p>Sed ligula arcu, interdum eu magna eget, tristique aliquet nibh. Aenean sodales justo vitae ex
-                        pharetra, vitae tincidunt dolor condimentum.</p>
+                    <h4>Datei herunterladen |F5|</h4>
+                    <p>Natürlich können Sie die hochgeladenen Dateien auch wieder herunterladen!<br><br><br></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="service-item">
-                    <i class="fa fa-check"></i>
-                    <h4>Optimal Hosting</h4>
-                    <p>Fusce blandit commodo metus eu suscipit. Nullam ut blandit neque. Aenean nec tellus ac velit
-                        elementum tempor. Pellentesque nec urna ipsum.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="fa fa-support"></i>
-                    <h4>Customer Support</h4>
-                    <p>Cras placerat mauris scelerisque, placerat enim sed, imperdiet diam. Fusce blandit commodo metus
-                        eu suscipit. Nullam ut blandit neque.</p>
+                    <i class="fa fa-eraser"></i>
+                    <h4>Datei löschen |F6|</h4>
+                    <p>Sie haben einen Fehler gemacht, oder die Gästeliste von 1918 ist zu alt geworden, um sie weiter aufzubewahren?
+                        Löschen können Sie bei uns natürlich auch!
+                    </p>
                 </div>
             </div>
         </div>
