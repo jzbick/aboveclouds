@@ -46,10 +46,3 @@
     position: relative;
     margin-bottom: 1em;
 }
-
-.rmvBtn{
-    position: absolute;
-    width: 1.5rem !important;
-    top: .75rem;
-    right: 1rem;
-}
