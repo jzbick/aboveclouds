@@ -46,3 +46,7 @@
     position: relative;
     margin-bottom: 1em;
 }
+
+.inputField#pw-repeat-input-field{
+    font-size: 0.75em;
+}

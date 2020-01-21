@@ -27,7 +27,7 @@ if (isset($_SESSION['N_ID'])) {
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloudicon.ico">
     <title>AboveClouds - <?= $username ?></title>
 
     <!-- Bootstrap core CSS -->

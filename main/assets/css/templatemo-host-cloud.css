@@ -315,11 +315,32 @@ header {
 
 .flex-container label{
     padding-left: 0.5%;
+    font-size: 20px;
+
 }
 
-#name, #email, #password{
+.flex-container h1 {
+    font-size: 20px;
+}
+.flex-container h2 {
+    font-size: 25px;
+}
+.flex-container#name, .flex-container#email, .flex-container#password{
     border-bottom: 2px solid gray;
     margin-top: 6%;
+}
+
+.edit-form-btn{
+    cursor: pointer;
+    margin-left: 16%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    horiz-align: center;
+    text-align: center;
+}
+
+.reset-btn{
+    margin-left: 10%;
 }
 
 .main-header {

@@ -95,7 +95,7 @@ if ($reg_complete == 1) {
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloud.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/cloudicon.ico">
     <title>Bei AboveClouds registrieren</title>
 
     <!-- Bootstrap core CSS -->
