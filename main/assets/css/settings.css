@@ -38,6 +38,10 @@
     margin-right: 2rem;
 }
 
+#del-acc-btn{
+    color: red;
+}
+
 .user-value{
     margin-top: 4rem;
     font-size: 1.1rem;

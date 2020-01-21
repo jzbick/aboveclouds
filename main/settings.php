@@ -73,7 +73,7 @@ if (isset($_SESSION['N_ID'])) {
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <span onclick="closeForm('username-form')" id="username-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="closeForm('username-form')" id="username-reset" class="edit-form-btn">Abbrechen</span>
                     <span onclick="submitForm('username-form')" class="edit-form-btn">Speichern</span>
                 </div>
             </form>
@@ -91,7 +91,7 @@ if (isset($_SESSION['N_ID'])) {
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <span onclick="closeForm('email-form')" id="email-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="closeForm('email-form')" id="email-reset" class="edit-form-btn">Abbrechen</span>
                     <span onclick="submitForm('email-form')" class="edit-form-btn">Speichern</span>
                 </div>
             </form>
@@ -113,8 +113,18 @@ if (isset($_SESSION['N_ID'])) {
                     </div>
                 </div>
                 <div class="edit-form-btn-wrapper">
-                    <span onclick="closeForm('pw-form')" id="pw-reset" class="edit-form-btn">Zurück</span>
+                    <span onclick="closeForm('pw-form')" id="pw-reset" class="edit-form-btn">Abbrechen</span>
                     <span onclick="submitForm('pw-form')" class="edit-form-btn">Speichern</span>
+                </div>
+            </form>
+        </div>
+        <div class="flex-container settings-container" id="deleteAccount">
+            <label class="open-btn" onclick="openForm('del-acc-form')" id="del-acc-btn">Account Löschen</label>
+            <form class="edit-form hide-form" id="del-acc-form" method="DELETE" action="./user/deleteAcc.php">
+                <h2>Wollen Sie Ihren Account wirklich Löschen?</h2>
+                <div>
+                    <span onclick="closeForm('del-acc-form')" id="del-acc-reset" class="edit-form-btn">Abbrechen</span>
+                    <span onclick="submitForm('del-acc-form')" class="edit-form-btn">Löschen</span>
                 </div>
             </form>
         </div>
