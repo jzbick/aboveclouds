@@ -393,7 +393,7 @@ header {
 .sidebar {
     display: flex;
     position: absolute;
-    height: 137.75%;
+    height: 131.1%;
     width: 20%;
     border-bottom: 2px solid gray;
     background-color: #F7F9FA;
@@ -445,7 +445,7 @@ header {
 }
 
 .filetable th {
-    padding: 0.5%;
+    padding: 0.8%;
     padding-left: 1.5%;
     height: 2%;
     text-align: left;
